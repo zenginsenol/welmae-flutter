@@ -13,8 +13,6 @@ class _WelcomeOnboardingScreenState extends State<WelcomeOnboardingScreen>
     with TickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
-  bool _isSignupHovered = false;
-  bool _isLoginHovered = false;
 
   @override
   void initState() {
@@ -46,12 +44,14 @@ class _WelcomeOnboardingScreenState extends State<WelcomeOnboardingScreen>
 
   void _handleSignupTap() {
     HapticFeedback.mediumImpact();
+    print('Kayıt Ol tıklandı - /location-selection');
     Navigator.pushNamed(context, '/location-selection');
   }
 
   void _handleLoginTap() {
     HapticFeedback.mediumImpact();
-    Navigator.pushNamed(context, '/phone-onboarding');
+    print('Giriş Yap tıklandı - /phone-login');
+    Navigator.pushNamed(context, '/phone-login');
   }
 
   @override
@@ -99,51 +99,45 @@ class _WelcomeOnboardingScreenState extends State<WelcomeOnboardingScreen>
                     child: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 40),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          // Kayıt Ol butonu - Sadece tıklama alanı
-                          GestureDetector(
-                            onTap: _handleSignupTap,
-                            child: Container(
-                              width: double.infinity,
-                              height: 56,
-                              color: Colors.transparent,
-                            ),
-                          ),
-                          
-                          const SizedBox(height: 20),
-                          
-                          // Giriş yapın linki
-                          MouseRegion(
-                            cursor: SystemMouseCursors.click,
-                            onEnter: (_) => setState(() => _isLoginHovered = true),
-                            onExit: (_) => setState(() => _isLoginHovered = false),
+                          // Kayıt Ol butonu - Tam genişlik
+                          Container(
+                            width: double.infinity,
+                            height: 56,
                             child: GestureDetector(
-                              onTap: _handleLoginTap,
-                              child: RichText(
-                                text: TextSpan(
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                  children: [
-                                    const TextSpan(text: 'Üyeliğiniz mi var? '),
-                                    TextSpan(
-                                      text: 'Giriş yapın',
-                                      style: TextStyle(
-                                        color: _isLoginHovered 
-                                            ? const Color(0xFF03A6A6) // Velmae teal
-                                            : const Color(0xFFB8E6E6), // Açık teal
-                                        fontWeight: FontWeight.w600,
-                                        decoration: TextDecoration.underline,
-                                      ),
-                                    ),
-                                  ],
+                              onTap: _handleSignupTap,
+                              child: Container(
+                                width: double.infinity,
+                                height: 56,
+                                decoration: BoxDecoration(
+                                  color: Colors.transparent,
+                                  borderRadius: BorderRadius.circular(28),
                                 ),
                               ),
                             ),
                           ),
+                          
+                          const SizedBox(height: 15),
+                          
+                          // Giriş Yap linki - Tam genişlik
+                          Container(
+                            width: double.infinity,
+                            height: 25,
+                            child: GestureDetector(
+                              onTap: _handleLoginTap,
+                              child: Container(
+                                width: double.infinity,
+                                height: 25,
+                                decoration: BoxDecoration(
+                                  color: Colors.transparent,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                              ),
+                            ),
+                          ),
+                          
+                          const SizedBox(height: 20),
                         ],
                       ),
                     ),

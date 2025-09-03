@@ -265,18 +265,10 @@ class _CountryMapScreenState extends State<CountryMapScreen> {
       width: double.infinity,
       height: double.infinity,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            velmaeMint.withValues(alpha: 0.3),
-            velmaeLightTeal,
-            velmaeMint.withValues(alpha: 0.2),
-          ],
-        ),
+        color: velmaeLightTeal,
       ),
       child: CustomPaint(
-        painter: MapPainter(),
+        painter: EuropeMapPainter(),
       ),
     );
   }
@@ -287,26 +279,34 @@ class _CountryMapScreenState extends State<CountryMapScreen> {
       top: MediaQuery.of(context).size.height * pin['y'] * 0.4,
       child: GestureDetector(
         onTap: () => _onCountrySelected(pin),
-        child: Container(
-          width: 40,
-          height: 40,
-          decoration: BoxDecoration(
-            color: velmaeTeal,
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.2),
-                blurRadius: 4,
-                offset: const Offset(0, 2),
+        child: Column(
+          children: [
+            // Turuncu pin
+            Container(
+              width: 12,
+              height: 12,
+              decoration: BoxDecoration(
+                color: const Color(0xFFFF6B35), // Turuncu
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.3),
+                    blurRadius: 2,
+                    offset: const Offset(0, 1),
+                  ),
+                ],
               ),
-            ],
-          ),
-          child: Center(
-            child: Text(
-              pin['flag']!,
-              style: const TextStyle(fontSize: 16),
             ),
-          ),
+            // Pin gövdesi
+            Container(
+              width: 2,
+              height: 8,
+              decoration: BoxDecoration(
+                color: const Color(0xFFFF6B35), // Turuncu
+                borderRadius: BorderRadius.circular(1),
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -355,36 +355,91 @@ class _CountryMapScreenState extends State<CountryMapScreen> {
   }
 }
 
-// Basit harita çizimi için CustomPainter
-class MapPainter extends CustomPainter {
+// Avrupa haritası çizimi için CustomPainter
+class EuropeMapPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = const Color(0xFFB8E6E6)
+      ..color = const Color(0xFFB8E6E6) // Açık teal
       ..style = PaintingStyle.fill;
 
-    // Basit kıta şekilleri çizimi
-    _drawContinent(canvas, size, 0.5, 0.4, 0.3, 0.2); // Avrupa
-    _drawContinent(canvas, size, 0.2, 0.4, 0.2, 0.3); // Kuzey Amerika
-    _drawContinent(canvas, size, 0.3, 0.7, 0.2, 0.2); // Güney Amerika
-    _drawContinent(canvas, size, 0.8, 0.5, 0.15, 0.25); // Asya
-    _drawContinent(canvas, size, 0.5, 0.7, 0.2, 0.15); // Afrika
-    _drawContinent(canvas, size, 0.85, 0.7, 0.1, 0.15); // Avustralya
+    // Avrupa kıtası ana şekli
+    _drawEurope(canvas, size);
+    
+    // Ülke sınırları
+    _drawCountryBorders(canvas, size);
   }
 
-  void _drawContinent(Canvas canvas, Size size, double x, double y, double width, double height) {
-    final rect = Rect.fromCenter(
-      center: Offset(size.width * x, size.height * y),
-      width: size.width * width,
-      height: size.height * height,
+  void _drawEurope(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = const Color(0xFFB8E6E6) // Açık teal
+      ..style = PaintingStyle.fill;
+      
+    final path = Path();
+    
+    // Avrupa'nın ana şekli - daha detaylı
+    path.moveTo(size.width * 0.35, size.height * 0.25); // İskandinavya
+    path.lineTo(size.width * 0.45, size.height * 0.25); // Norveç
+    path.lineTo(size.width * 0.55, size.height * 0.28); // İsveç
+    path.lineTo(size.width * 0.65, size.height * 0.30); // Finlandiya
+    path.lineTo(size.width * 0.70, size.height * 0.35); // Baltık
+    path.lineTo(size.width * 0.75, size.height * 0.40); // Polonya
+    path.lineTo(size.width * 0.80, size.height * 0.45); // Ukrayna
+    path.lineTo(size.width * 0.85, size.height * 0.50); // Türkiye
+    path.lineTo(size.width * 0.80, size.height * 0.55); // Yunanistan
+    path.lineTo(size.width * 0.75, size.height * 0.60); // İtalya
+    path.lineTo(size.width * 0.70, size.height * 0.65); // İspanya
+    path.lineTo(size.width * 0.60, size.height * 0.70); // Portekiz
+    path.lineTo(size.width * 0.50, size.height * 0.75); // Fransa
+    path.lineTo(size.width * 0.40, size.height * 0.70); // Almanya
+    path.lineTo(size.width * 0.35, size.height * 0.65); // Hollanda
+    path.lineTo(size.width * 0.30, size.height * 0.60); // Belçika
+    path.lineTo(size.width * 0.25, size.height * 0.55); // İngiltere
+    path.lineTo(size.width * 0.20, size.height * 0.50); // İrlanda
+    path.lineTo(size.width * 0.25, size.height * 0.40); // İzlanda
+    path.lineTo(size.width * 0.35, size.height * 0.25); // Geri başlangıç
+    
+    path.close();
+    
+    canvas.drawPath(path, paint);
+  }
+
+  void _drawCountryBorders(Canvas canvas, Size size) {
+    final borderPaint = Paint()
+      ..color = Colors.white
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1;
+
+    // Ülke sınırları - basit çizgiler
+    canvas.drawLine(
+      Offset(size.width * 0.35, size.height * 0.30),
+      Offset(size.width * 0.45, size.height * 0.30),
+      borderPaint,
     );
     
-    final path = Path()
-      ..addRRect(RRect.fromRectAndRadius(rect, const Radius.circular(8)));
+    canvas.drawLine(
+      Offset(size.width * 0.50, size.height * 0.35),
+      Offset(size.width * 0.60, size.height * 0.35),
+      borderPaint,
+    );
     
-    canvas.drawPath(path, Paint()
-      ..color = const Color(0xFFB8E6E6)
-      ..style = PaintingStyle.fill);
+    canvas.drawLine(
+      Offset(size.width * 0.65, size.height * 0.40),
+      Offset(size.width * 0.75, size.height * 0.40),
+      borderPaint,
+    );
+    
+    canvas.drawLine(
+      Offset(size.width * 0.70, size.height * 0.45),
+      Offset(size.width * 0.80, size.height * 0.45),
+      borderPaint,
+    );
+    
+    canvas.drawLine(
+      Offset(size.width * 0.75, size.height * 0.50),
+      Offset(size.width * 0.85, size.height * 0.50),
+      borderPaint,
+    );
   }
 
   @override
