@@ -101,47 +101,13 @@ class _WelcomeOnboardingScreenState extends State<WelcomeOnboardingScreen>
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          // Kayıt Ol butonu - Resimdeki butonun üzerine yerleştir
-                          Container(
-                            width: double.infinity,
-                            height: 56,
-                            decoration: BoxDecoration(
+                          // Kayıt Ol butonu - Sadece tıklama alanı
+                          GestureDetector(
+                            onTap: _handleSignupTap,
+                            child: Container(
+                              width: double.infinity,
+                              height: 56,
                               color: Colors.transparent,
-                              borderRadius: BorderRadius.circular(28),
-                            ),
-                            child: MouseRegion(
-                              cursor: SystemMouseCursors.click,
-                              onEnter: (_) => setState(() => _isSignupHovered = true),
-                              onExit: (_) => setState(() => _isSignupHovered = false),
-                              child: GestureDetector(
-                                onTap: _handleSignupTap,
-                                child: Container(
-                                  width: double.infinity,
-                                  height: 56,
-                                  decoration: BoxDecoration(
-                                    color: _isSignupHovered 
-                                        ? const Color(0xFFA8D6D6).withValues(alpha: 0.8) // Yarı şeffaf
-                                        : Colors.transparent, // Tamamen şeffaf
-                                    borderRadius: BorderRadius.circular(28),
-                                    border: Border.all(
-                                      color: _isSignupHovered 
-                                          ? const Color(0xFF03A6A6)
-                                          : Colors.transparent,
-                                      width: 2,
-                                    ),
-                                  ),
-                                  child: const Center(
-                                    child: Text(
-                                      'Kayıt Ol',
-                                      style: TextStyle(
-                                        color: Colors.transparent, // Görünmez yazı
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
                             ),
                           ),
                           
