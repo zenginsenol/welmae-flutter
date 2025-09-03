@@ -101,37 +101,43 @@ class _WelcomeOnboardingScreenState extends State<WelcomeOnboardingScreen>
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          // Kayıt Ol butonu
-                          MouseRegion(
-                            cursor: SystemMouseCursors.click,
-                            onEnter: (_) => setState(() => _isSignupHovered = true),
-                            onExit: (_) => setState(() => _isSignupHovered = false),
-                            child: GestureDetector(
-                              onTap: _handleSignupTap,
-                              child: AnimatedContainer(
-                                duration: const Duration(milliseconds: 200),
-                                width: double.infinity,
-                                height: 56,
-                                decoration: BoxDecoration(
-                                  color: _isSignupHovered 
-                                      ? const Color(0xFFA8D6D6) // Daha koyu teal
-                                      : const Color(0xFFB8E6E6), // Açık teal/mint
-                                  borderRadius: BorderRadius.circular(28),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withValues(alpha: 0.1),
-                                      blurRadius: 8,
-                                      offset: const Offset(0, 2),
+                          // Kayıt Ol butonu - Resimdeki butonun üzerine yerleştir
+                          Container(
+                            width: double.infinity,
+                            height: 56,
+                            decoration: BoxDecoration(
+                              color: Colors.transparent,
+                              borderRadius: BorderRadius.circular(28),
+                            ),
+                            child: MouseRegion(
+                              cursor: SystemMouseCursors.click,
+                              onEnter: (_) => setState(() => _isSignupHovered = true),
+                              onExit: (_) => setState(() => _isSignupHovered = false),
+                              child: GestureDetector(
+                                onTap: _handleSignupTap,
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 56,
+                                  decoration: BoxDecoration(
+                                    color: _isSignupHovered 
+                                        ? const Color(0xFFA8D6D6).withValues(alpha: 0.8) // Yarı şeffaf
+                                        : Colors.transparent, // Tamamen şeffaf
+                                    borderRadius: BorderRadius.circular(28),
+                                    border: Border.all(
+                                      color: _isSignupHovered 
+                                          ? const Color(0xFF03A6A6)
+                                          : Colors.transparent,
+                                      width: 2,
                                     ),
-                                  ],
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    'Kayıt Ol',
-                                    style: TextStyle(
-                                      color: const Color(0xFF013C3C), // Koyu teal
-                                      fontSize: _isSignupHovered ? 18 : 16,
-                                      fontWeight: FontWeight.w700,
+                                  ),
+                                  child: const Center(
+                                    child: Text(
+                                      'Kayıt Ol',
+                                      style: TextStyle(
+                                        color: Colors.transparent, // Görünmez yazı
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w700,
+                                      ),
                                     ),
                                   ),
                                 ),
