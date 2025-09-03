@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class ExploreScreen extends StatefulWidget {
   const ExploreScreen({super.key});
@@ -7,269 +8,378 @@ class ExploreScreen extends StatefulWidget {
   State<ExploreScreen> createState() => _ExploreScreenState();
 }
 
-class _ExploreScreenState extends State<ExploreScreen> {
-  String selectedCategory = 'Tümü';
+class _ExploreScreenState extends State<ExploreScreen>
+    with TickerProviderStateMixin {
+  late AnimationController _animationController;
+  late Animation<double> _fadeAnimation;
+  late Animation<double> _slideAnimation;
 
-  final List<Map<String, dynamic>> categories = [
-    {'id': 1, 'name': 'Tümü', 'icon': Icons.grid_3x3},
-    {'id': 2, 'name': 'Doğa', 'icon': Icons.landscape},
-    {'id': 3, 'name': 'Şehir', 'icon': Icons.location_city},
-    {'id': 4, 'name': 'Plaj', 'icon': Icons.beach_access},
-    {'id': 5, 'name': 'Dağ', 'icon': Icons.terrain},
-    {'id': 6, 'name': 'Tarih', 'icon': Icons.history_edu},
+  // Velmae Brand Colors
+  static const Color velmaePrimary = Color(0xFF2563EB);
+  static const Color velmaeSecondary = Color(0xFF10B981);
+  static const Color velmaeAccent = Color(0xFFEF4444);
+  static const Color velmaeOrange = Color(0xFFF97316);
+  static const Color surfaceWhite = Color(0xFFFFFFFF);
+  static const Color backgroundLight = Color(0xFFF8FAFC);
+  static const Color textDark = Color(0xFF0F172A);
+  static const Color textMedium = Color(0xFF475569);
+  static const Color textLight = Color(0xFF94A3B8);
+  static const Color borderLight = Color(0xFFE2E8F0);
+
+  // Featured content categories
+  final List<Map<String, dynamic>> featuredCategories = [
+    {
+      'title': 'Popüler Destinasyonlar',
+      'subtitle': '156 öne çıkan yer',
+      'image': 'assets/images/velmae/velmae-app_countrydetail01.png',
+      'color': velmaePrimary,
+    },
+    {
+      'title': 'Deniz Tatili',
+      'subtitle': '89 sahil destinasyonu',
+      'image': 'assets/images/velmae/velmae-app_countrydetail02.png',
+      'color': velmaeSecondary,
+    },
+    {
+      'title': 'Kültür Turları',
+      'subtitle': '67 tarihi mekan',
+      'image': 'assets/images/velmae/velmae-app_placedetail01.png',
+      'color': velmaeOrange,
+    },
+    {
+      'title': 'Doğa Gezileri',
+      'subtitle': '134 doğal alan',
+      'image': 'assets/images/velmae/velmae-app_placedetail02.png',
+      'color': velmaeAccent,
+    },
   ];
 
-  final List<Map<String, dynamic>> destinations = [
+  // Recent travelers - User profiles to explore
+  final List<Map<String, dynamic>> recentTravelers = [
     {
-      'id': '1',
-      'name': 'Kapadokya',
-      'location': 'Nevşehir, Türkiye',
-      'image': 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop',
+      'name': 'Ayşe K.',
+      'location': 'İstanbul',
+      'tripCount': 12,
       'rating': 4.8,
-      'price': '₺2,500',
-      'category': 'Doğa',
-      'isFavorite': false,
+      'lastTrip': 'Kapadokya',
+      'avatar': 'assets/images/velmae/velmae-app_profile-01photos.png',
+      'isVerified': true,
     },
     {
-      'id': '2',
-      'name': 'Antalya',
-      'location': 'Antalya, Türkiye',
-      'image': 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop',
+      'name': 'Mehmet A.',
+      'location': 'Ankara',
+      'tripCount': 8,
       'rating': 4.6,
-      'price': '₺1,800',
-      'category': 'Plaj',
-      'isFavorite': true,
+      'lastTrip': 'Antalya',
+      'avatar': 'assets/images/velmae/velmae-app_profileO-01photos.png',
+      'isVerified': false,
     },
     {
-      'id': '3',
-      'name': 'İstanbul',
-      'location': 'İstanbul, Türkiye',
-      'image': 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=300&h=200&fit=crop',
-      'rating': 4.7,
-      'price': '₺3,200',
-      'category': 'Şehir',
-      'isFavorite': false,
-    },
-    {
-      'id': '4',
-      'name': 'Pamukkale',
-      'location': 'Denizli, Türkiye',
-      'image': 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=300&h=200&fit=crop',
-      'rating': 4.5,
-      'price': '₺1,500',
-      'category': 'Doğa',
-      'isFavorite': false,
-    },
-    {
-      'id': '5',
-      'name': 'Uludağ',
-      'location': 'Bursa, Türkiye',
-      'image': 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&h=200&fit=crop',
-      'rating': 4.4,
-      'price': '₺2,800',
-      'category': 'Dağ',
-      'isFavorite': true,
-    },
-    {
-      'id': '6',
-      'name': 'Efes',
-      'location': 'İzmir, Türkiye',
-      'image': 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop',
-      'rating': 4.6,
-      'price': '₺1,200',
-      'category': 'Tarih',
-      'isFavorite': false,
+      'name': 'Zeynep M.',
+      'location': 'İzmir',
+      'tripCount': 15,
+      'rating': 4.9,
+      'lastTrip': 'Bodrum',
+      'avatar': 'assets/images/velmae/velmae-app_profile-02trips.png',
+      'isVerified': true,
     },
   ];
 
-  List<Map<String, dynamic>> get filteredDestinations {
-    if (selectedCategory == 'Tümü') {
-      return destinations;
-    }
-    return destinations.where((dest) => dest['category'] == selectedCategory).toList();
+  @override
+  void initState() {
+    super.initState();
+    _setupAnimations();
   }
 
-  void _toggleFavorite(String destinationId) {
-    setState(() {
-      final destination = destinations.firstWhere((d) => d['id'] == destinationId);
-      destination['isFavorite'] = !destination['isFavorite'];
-    });
+  void _setupAnimations() {
+    _animationController = AnimationController(
+      duration: const Duration(milliseconds: 1200),
+      vsync: this,
+    );
+
+    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(
+        parent: _animationController,
+        curve: const Interval(0.0, 0.8, curve: Curves.easeOut),
+      ),
+    );
+
+    _slideAnimation = Tween<double>(begin: 40.0, end: 0.0).animate(
+      CurvedAnimation(
+        parent: _animationController,
+        curve: const Interval(0.2, 1.0, curve: Curves.elasticOut),
+      ),
+    );
+
+    _animationController.forward();
   }
 
-  void _navigateToDestination(String destinationId) {
-    Navigator.of(context).pushNamed('/destination', arguments: destinationId);
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: Column(
-          children: [
-            // Header
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text(
-                    'Keşfet',
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  Container(
-                    width: 45,
-                    height: 45,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[100],
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Icon(
-                      Icons.filter_list,
-                      color: Colors.grey[600],
-                      size: 24,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            // Search Bar
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                decoration: BoxDecoration(
-                  color: Colors.grey[100],
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Row(
+      backgroundColor: backgroundLight,
+      appBar: _buildAppBar(),
+      body: AnimatedBuilder(
+        animation: _animationController,
+        builder: (context, child) {
+          return FadeTransition(
+            opacity: _fadeAnimation,
+            child: Transform.translate(
+              offset: Offset(0, _slideAnimation.value),
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(Icons.search, color: Colors.grey[600], size: 20),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Destinasyon ara...',
-                          hintStyle: TextStyle(color: Colors.grey[600]),
-                          border: InputBorder.none,
-                        ),
-                      ),
-                    ),
-                    Icon(Icons.tune, color: Colors.grey[600], size: 20),
+                    // Search Section
+                    _buildSearchSection(),
+
+                    // Featured Categories
+                    _buildFeaturedCategories(),
+
+                    // Recent Travelers Section
+                    _buildRecentTravelers(),
+
+                    // Quick Actions
+                    _buildQuickActions(),
+
+                    const SizedBox(height: 20),
                   ],
                 ),
               ),
             ),
+          );
+        },
+      ),
+    );
+  }
 
-            const SizedBox(height: 20),
+  PreferredSizeWidget _buildAppBar() {
+    return AppBar(
+      backgroundColor: surfaceWhite,
+      elevation: 0,
+      leading: IconButton(
+        onPressed: () => Navigator.pop(context),
+        icon: Container(
+          width: 40,
+          height: 40,
+          decoration: BoxDecoration(
+            color: backgroundLight,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: const Icon(
+            Icons.arrow_back_ios_new,
+            color: textDark,
+            size: 18,
+          ),
+        ),
+      ),
+      title: const Text(
+        'Keşfet',
+        style: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.w700,
+          color: textDark,
+        ),
+      ),
+      centerTitle: true,
+      actions: [
+        IconButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/search');
+          },
+          icon: Container(
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              color: backgroundLight,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: const Icon(Icons.search, color: textDark, size: 20),
+          ),
+        ),
+        const SizedBox(width: 8),
+      ],
+    );
+  }
 
-            // Categories
-            SizedBox(
-              height: 50,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                itemCount: categories.length,
-                itemBuilder: (context, index) {
-                  final category = categories[index];
-                  final isSelected = selectedCategory == category['name'];
-                  
-                  return GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        selectedCategory = category['name'];
-                      });
-                    },
-                    child: Container(
-                      margin: const EdgeInsets.only(right: 12),
-                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                      decoration: BoxDecoration(
-                        color: isSelected ? const Color(0xFF2563EB) : Colors.grey[100],
-                        borderRadius: BorderRadius.circular(25),
-                        border: Border.all(
-                          color: isSelected ? const Color(0xFF2563EB) : Colors.grey[300]!,
-                        ),
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Icon(
-                            category['icon'],
-                            color: isSelected ? Colors.white : Colors.grey[600],
-                            size: 20,
-                          ),
-                          const SizedBox(width: 8),
-                          Text(
-                            category['name'],
-                            style: TextStyle(
-                              color: isSelected ? Colors.white : Colors.grey[600],
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+  Widget _buildSearchSection() {
+    return Container(
+      margin: const EdgeInsets.all(20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            'Nereyi keşfetmek istiyorsun?',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.w700,
+              color: textDark,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'Binlerce destinasyon arasından seç',
+            style: TextStyle(fontSize: 16, color: textMedium),
+          ),
+          const SizedBox(height: 20),
+          Container(
+            decoration: BoxDecoration(
+              color: surfaceWhite,
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: borderLight),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.04),
+                  offset: const Offset(0, 2),
+                  blurRadius: 8,
+                ),
+              ],
+            ),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'Destinasyon, şehir veya ülke ara...',
+                hintStyle: TextStyle(color: textLight, fontSize: 16),
+                prefixIcon: Icon(Icons.search, color: textLight, size: 22),
+                border: InputBorder.none,
+                contentPadding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 16,
+                ),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/search');
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildFeaturedCategories() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          child: Text(
+            'Öne Çıkan Kategoriler',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+              color: textDark,
+            ),
+          ),
+        ),
+        const SizedBox(height: 16),
+        SizedBox(
+          height: 200,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            itemCount: featuredCategories.length,
+            itemBuilder: (context, index) {
+              final category = featuredCategories[index];
+              return _buildCategoryCard(category, index);
+            },
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildCategoryCard(Map<String, dynamic> category, int index) {
+    return Container(
+      width: 160,
+      margin: const EdgeInsets.only(right: 16),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.08),
+            offset: const Offset(0, 4),
+            blurRadius: 16,
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: Stack(
+          children: [
+            // Background Image
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    category['color'].withValues(alpha: 0.8),
+                    category['color'],
+                  ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                ),
+              ),
+              child: Image.asset(
+                category['image'],
+                width: double.infinity,
+                height: double.infinity,
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  return Container(
+                    color: category['color'],
+                    child: Icon(Icons.landscape, color: Colors.white, size: 48),
                   );
                 },
               ),
             ),
 
-            const SizedBox(height: 20),
-
-            // Results Count
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    '${filteredDestinations.length} sonuç bulundu',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.grey[600],
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      Icon(Icons.sort, color: Colors.grey[600], size: 20),
-                      const SizedBox(width: 4),
-                      Text(
-                        'Sırala',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.grey[600],
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+            // Gradient Overlay
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.transparent,
+                    Colors.black.withValues(alpha: 0.7),
+                  ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                ),
               ),
             ),
 
-            const SizedBox(height: 20),
-
-            // Destinations Grid
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: 0.75,
-                    crossAxisSpacing: 16,
-                    mainAxisSpacing: 16,
+            // Content
+            Positioned(
+              bottom: 16,
+              left: 16,
+              right: 16,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    category['title'],
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    ),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  itemCount: filteredDestinations.length,
-                  itemBuilder: (context, index) {
-                    final destination = filteredDestinations[index];
-                    return _buildDestinationCard(destination);
-                  },
-                ),
+                  const SizedBox(height: 4),
+                  Text(
+                    category['subtitle'],
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white.withValues(alpha: 0.9),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
@@ -278,188 +388,219 @@ class _ExploreScreenState extends State<ExploreScreen> {
     );
   }
 
-  Widget _buildDestinationCard(Map<String, dynamic> destination) {
+  Widget _buildRecentTravelers() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const SizedBox(height: 32),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                'Son Gezginler',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                  color: textDark,
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/travelers');
+                },
+                child: const Text(
+                  'Tümünü Gör',
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: velmaePrimary,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 16),
+        SizedBox(
+          height: 120,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            itemCount: recentTravelers.length,
+            itemBuilder: (context, index) {
+              final traveler = recentTravelers[index];
+              return _buildTravelerCard(traveler);
+            },
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildTravelerCard(Map<String, dynamic> traveler) {
+    return Container(
+      width: 100,
+      margin: const EdgeInsets.only(right: 16),
+      child: Column(
+        children: [
+          // Avatar
+          Stack(
+            children: [
+              Container(
+                width: 64,
+                height: 64,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: velmaePrimary.withValues(alpha: 0.3),
+                    width: 2,
+                  ),
+                ),
+                child: ClipOval(
+                  child: Container(
+                    color: backgroundLight,
+                    child: Icon(Icons.person, color: textLight, size: 32),
+                  ),
+                ),
+              ),
+              if (traveler['isVerified'])
+                Positioned(
+                  bottom: 0,
+                  right: 0,
+                  child: Container(
+                    width: 20,
+                    height: 20,
+                    decoration: const BoxDecoration(
+                      color: velmaeSecondary,
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(
+                      Icons.check,
+                      color: Colors.white,
+                      size: 12,
+                    ),
+                  ),
+                ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          Text(
+            traveler['name'],
+            style: const TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+              color: textDark,
+            ),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
+          Text(
+            '${traveler['tripCount']} gezi',
+            style: TextStyle(fontSize: 12, color: textMedium),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildQuickActions() {
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            'Hızlı İşlemler',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+              color: textDark,
+            ),
+          ),
+          const SizedBox(height: 16),
+          Row(
+            children: [
+              Expanded(
+                child: _buildQuickActionCard(
+                  icon: Icons.add_location_alt,
+                  title: 'Gezi Oluştur',
+                  subtitle: 'Yeni bir gezi planla',
+                  color: velmaePrimary,
+                  onTap: () {
+                    Navigator.pushNamed(context, '/create-trip');
+                  },
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: _buildQuickActionCard(
+                  icon: Icons.search,
+                  title: 'Gezi Ara',
+                  subtitle: 'Mevcut gezilere katıl',
+                  color: velmaeSecondary,
+                  onTap: () {
+                    Navigator.pushNamed(context, '/search-trips');
+                  },
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildQuickActionCard({
+    required IconData icon,
+    required String title,
+    required String subtitle,
+    required Color color,
+    required VoidCallback onTap,
+  }) {
     return GestureDetector(
-      onTap: () => _navigateToDestination(destination['id']),
+      onTap: () {
+        HapticFeedback.mediumImpact();
+        onTap();
+      },
       child: Container(
+        padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: surfaceWhite,
           borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: borderLight),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.1),
-              blurRadius: 10,
-              offset: const Offset(0, 5),
+              color: Colors.black.withValues(alpha: 0.04),
+              offset: const Offset(0, 2),
+              blurRadius: 8,
             ),
           ],
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Image
-            Expanded(
-              flex: 3,
-              child: Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(16),
-                      topRight: Radius.circular(16),
-                    ),
-                    child: Image.network(
-                      destination['image'],
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                      errorBuilder: (context, error, stackTrace) {
-                        return Container(
-                          color: Colors.grey[200],
-                          child: Icon(
-                            Icons.image,
-                            size: 40,
-                            color: Colors.grey[400],
-                          ),
-                        );
-                      },
-                    ),
-                  ),
-                  
-                  // Favorite Button
-                  Positioned(
-                    top: 8,
-                    right: 8,
-                    child: GestureDetector(
-                      onTap: () => _toggleFavorite(destination['id']),
-                      child: Container(
-                        padding: const EdgeInsets.all(6),
-                        decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.9),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Icon(
-                          destination['isFavorite'] 
-                              ? Icons.favorite 
-                              : Icons.favorite_border,
-                          color: destination['isFavorite'] 
-                              ? Colors.red 
-                              : Colors.grey[600],
-                          size: 18,
-                        ),
-                      ),
-                    ),
-                  ),
-                  
-                  // Price Tag
-                  Positioned(
-                    bottom: 8,
-                    left: 8,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 8,
-                        vertical: 4,
-                      ),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF2563EB),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(
-                        destination['price'],
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+            Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                color: color.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Icon(icon, color: color, size: 20),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              title,
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                color: textDark,
               ),
             ),
-            
-            // Content
-            Expanded(
-              flex: 2,
-              child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      destination['name'],
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87,
-                      ),
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    
-                    const SizedBox(height: 4),
-                    
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.location_on_outlined,
-                          color: Colors.grey[600],
-                          size: 14,
-                        ),
-                        const SizedBox(width: 4),
-                        Expanded(
-                          child: Text(
-                            destination['location'],
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: Colors.grey[600],
-                            ),
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ),
-                      ],
-                    ),
-                    
-                    const Spacer(),
-                    
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.star,
-                          color: Colors.amber,
-                          size: 16,
-                        ),
-                        const SizedBox(width: 4),
-                        Text(
-                          destination['rating'].toString(),
-                          style: const TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        const Spacer(),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 6,
-                            vertical: 2,
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.grey[100],
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Text(
-                            destination['category'],
-                            style: TextStyle(
-                              fontSize: 10,
-                              color: Colors.grey[600],
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            const SizedBox(height: 4),
+            Text(subtitle, style: TextStyle(fontSize: 12, color: textMedium)),
           ],
         ),
       ),

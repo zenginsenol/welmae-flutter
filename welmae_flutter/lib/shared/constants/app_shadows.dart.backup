@@ -1,0 +1,1456 @@
+
+import 'package:flutter/material.dart';
+
+class AppShadows {
+  // No shadow
+  static const BoxShadow none = BoxShadow(
+    color: Colors.transparent,
+    offset: Offset.zero,
+    blurRadius: 0,
+    spreadRadius: 0,
+  );
+
+  // Small shadows
+  static const BoxShadow xs = BoxShadow(
+    color: Color(0x0F000000),
+    offset: Offset(0, 1),
+    blurRadius: 1,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xs2 = BoxShadow(
+    color: Color(0x15000000),
+    offset: Offset(0, 2),
+    blurRadius: 2,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xs3 = BoxShadow(
+    color: Color(0x1A000000),
+    offset: Offset(0, 3),
+    blurRadius: 3,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xs4 = BoxShadow(
+    color: Color(0x20000000),
+    offset: Offset(0, 4),
+    blurRadius: 4,
+    spreadRadius: 0,
+  );
+
+  // Small shadows with spread
+  static const BoxShadow xsSpread = BoxShadow(
+    color: Color(0x0F000000),
+    offset: Offset(0, 1),
+    blurRadius: 1,
+    spreadRadius: 1,
+  );
+
+  static const BoxShadow xs2Spread = BoxShadow(
+    color: Color(0x15000000),
+    offset: Offset(0, 2),
+    blurRadius: 2,
+    spreadRadius: 2,
+  );
+
+  static const BoxShadow xs3Spread = BoxShadow(
+    color: Color(0x1A000000),
+    offset: Offset(0, 3),
+    blurRadius: 3,
+    spreadRadius: 3,
+  );
+
+  static const BoxShadow xs4Spread = BoxShadow(
+    color: Color(0x20000000),
+    offset: Offset(0, 4),
+    blurRadius: 4,
+    spreadRadius: 4,
+  );
+
+  // Small shadows with offset
+  static const BoxShadow xsOffset = BoxShadow(
+    color: Color(0x0F000000),
+    offset: Offset(1, 1),
+    blurRadius: 1,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xs2Offset = BoxShadow(
+    color: Color(0x15000000),
+    offset: Offset(2, 2),
+    blurRadius: 2,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xs3Offset = BoxShadow(
+    color: Color(0x1A000000),
+    offset: Offset(3, 3),
+    blurRadius: 3,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xs4Offset = BoxShadow(
+    color: Color(0x20000000),
+    offset: Offset(4, 4),
+    blurRadius: 4,
+    spreadRadius: 0,
+  );
+
+  // Small shadows with diagonal offset
+  static const BoxShadow xsDiagonal = BoxShadow(
+    color: Color(0x0F000000),
+    offset: Offset(1, -1),
+    blurRadius: 1,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xs2Diagonal = BoxShadow(
+    color: Color(0x15000000),
+    offset: Offset(2, -2),
+    blurRadius: 2,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xs3Diagonal = BoxShadow(
+    color: Color(0x1A000000),
+    offset: Offset(3, -3),
+    blurRadius: 3,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xs4Diagonal = BoxShadow(
+    color: Color(0x20000000),
+    offset: Offset(4, -4),
+    blurRadius: 4,
+    spreadRadius: 0,
+  );
+
+  // Small shadows with horizontal offset
+  static const BoxShadow xsHorizontal = BoxShadow(
+    color: Color(0x0F000000),
+    offset: Offset(1, 0),
+    blurRadius: 1,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xs2Horizontal = BoxShadow(
+    color: Color(0x15000000),
+    offset: Offset(2, 0),
+    blurRadius: 2,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xs3Horizontal = BoxShadow(
+    color: Color(0x1A000000),
+    offset: Offset(3, 0),
+    blurRadius: 3,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xs4Horizontal = BoxShadow(
+    color: Color(0x20000000),
+    offset: Offset(4, 0),
+    blurRadius: 4,
+    spreadRadius: 0,
+  );
+
+  // Small shadows with vertical offset
+  static const BoxShadow xsVertical = BoxShadow(
+    color: Color(0x0F000000),
+    offset: Offset(0, 1),
+    blurRadius: 1,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xs2Vertical = BoxShadow(
+    color: Color(0x15000000),
+    offset: Offset(0, 2),
+    blurRadius: 2,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xs3Vertical = BoxShadow(
+    color: Color(0x1A000000),
+    offset: Offset(0, 3),
+    blurRadius: 3,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xs4Vertical = BoxShadow(
+    color: Color(0x20000000),
+    offset: Offset(0, 4),
+    blurRadius: 4,
+    spreadRadius: 0,
+  );
+
+  // Medium shadows
+  static const BoxShadow sm = BoxShadow(
+    color: Color(0x1A000000),
+    offset: Offset(0, 2),
+    blurRadius: 4,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow sm2 = BoxShadow(
+    color: Color(0x24000000),
+    offset: Offset(0, 4),
+    blurRadius: 8,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow sm3 = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(0, 6),
+    blurRadius: 12,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow sm4 = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(0, 8),
+    blurRadius: 16,
+    spreadRadius: 0,
+  );
+
+  // Medium shadows with spread
+  static const BoxShadow smSpread = BoxShadow(
+    color: Color(0x1A000000),
+    offset: Offset(0, 2),
+    blurRadius: 4,
+    spreadRadius: 2,
+  );
+
+  static const BoxShadow sm2Spread = BoxShadow(
+    color: Color(0x24000000),
+    offset: Offset(0, 4),
+    blurRadius: 8,
+    spreadRadius: 4,
+  );
+
+  static const BoxShadow sm3Spread = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(0, 6),
+    blurRadius: 12,
+    spreadRadius: 6,
+  );
+
+  static const BoxShadow sm4Spread = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(0, 8),
+    blurRadius: 16,
+    spreadRadius: 8,
+  );
+
+  // Medium shadows with offset
+  static const BoxShadow smOffset = BoxShadow(
+    color: Color(0x1A000000),
+    offset: Offset(2, 2),
+    blurRadius: 4,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow sm2Offset = BoxShadow(
+    color: Color(0x24000000),
+    offset: Offset(4, 4),
+    blurRadius: 8,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow sm3Offset = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(6, 6),
+    blurRadius: 12,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow sm4Offset = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(8, 8),
+    blurRadius: 16,
+    spreadRadius: 0,
+  );
+
+  // Medium shadows with diagonal offset
+  static const BoxShadow smDiagonal = BoxShadow(
+    color: Color(0x1A000000),
+    offset: Offset(2, -2),
+    blurRadius: 4,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow sm2Diagonal = BoxShadow(
+    color: Color(0x24000000),
+    offset: Offset(4, -4),
+    blurRadius: 8,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow sm3Diagonal = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(6, -6),
+    blurRadius: 12,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow sm4Diagonal = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(8, -8),
+    blurRadius: 16,
+    spreadRadius: 0,
+  );
+
+  // Medium shadows with horizontal offset
+  static const BoxShadow smHorizontal = BoxShadow(
+    color: Color(0x1A000000),
+    offset: Offset(2, 0),
+    blurRadius: 4,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow sm2Horizontal = BoxShadow(
+    color: Color(0x24000000),
+    offset: Offset(4, 0),
+    blurRadius: 8,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow sm3Horizontal = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(6, 0),
+    blurRadius: 12,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow sm4Horizontal = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(8, 0),
+    blurRadius: 16,
+    spreadRadius: 0,
+  );
+
+  // Medium shadows with vertical offset
+  static const BoxShadow smVertical = BoxShadow(
+    color: Color(0x1A000000),
+    offset: Offset(0, 2),
+    blurRadius: 4,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow sm2Vertical = BoxShadow(
+    color: Color(0x24000000),
+    offset: Offset(0, 4),
+    blurRadius: 8,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow sm3Vertical = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(0, 6),
+    blurRadius: 12,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow sm4Vertical = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(0, 8),
+    blurRadius: 16,
+    spreadRadius: 0,
+  );
+
+  // Large shadows
+  static const BoxShadow md = BoxShadow(
+    color: Color(0x24000000),
+    offset: Offset(0, 4),
+    blurRadius: 8,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow md2 = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(0, 8),
+    blurRadius: 16,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow md3 = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(0, 12),
+    blurRadius: 24,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow md4 = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(0, 16),
+    blurRadius: 32,
+    spreadRadius: 0,
+  );
+
+  // Large shadows with spread
+  static const BoxShadow mdSpread = BoxShadow(
+    color: Color(0x24000000),
+    offset: Offset(0, 4),
+    blurRadius: 8,
+    spreadRadius: 4,
+  );
+
+  static const BoxShadow md2Spread = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(0, 8),
+    blurRadius: 16,
+    spreadRadius: 8,
+  );
+
+  static const BoxShadow md3Spread = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(0, 12),
+    blurRadius: 24,
+    spreadRadius: 12,
+  );
+
+  static const BoxShadow md4Spread = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(0, 16),
+    blurRadius: 32,
+    spreadRadius: 16,
+  );
+
+  // Large shadows with offset
+  static const BoxShadow mdOffset = BoxShadow(
+    color: Color(0x24000000),
+    offset: Offset(4, 4),
+    blurRadius: 8,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow md2Offset = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(8, 8),
+    blurRadius: 16,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow md3Offset = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(12, 12),
+    blurRadius: 24,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow md4Offset = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(16, 16),
+    blurRadius: 32,
+    spreadRadius: 0,
+  );
+
+  // Large shadows with diagonal offset
+  static const BoxShadow mdDiagonal = BoxShadow(
+    color: Color(0x24000000),
+    offset: Offset(4, -4),
+    blurRadius: 8,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow md2Diagonal = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(8, -8),
+    blurRadius: 16,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow md3Diagonal = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(12, -12),
+    blurRadius: 24,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow md4Diagonal = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(16, -16),
+    blurRadius: 32,
+    spreadRadius: 0,
+  );
+
+  // Large shadows with horizontal offset
+  static const BoxShadow mdHorizontal = BoxShadow(
+    color: Color(0x24000000),
+    offset: Offset(4, 0),
+    blurRadius: 8,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow md2Horizontal = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(8, 0),
+    blurRadius: 16,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow md3Horizontal = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(12, 0),
+    blurRadius: 24,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow md4Horizontal = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(16, 0),
+    blurRadius: 32,
+    spreadRadius: 0,
+  );
+
+  // Large shadows with vertical offset
+  static const BoxShadow mdVertical = BoxShadow(
+    color: Color(0x24000000),
+    offset: Offset(0, 4),
+    blurRadius: 8,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow md2Vertical = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(0, 8),
+    blurRadius: 16,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow md3Vertical = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(0, 12),
+    blurRadius: 24,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow md4Vertical = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(0, 16),
+    blurRadius: 32,
+    spreadRadius: 0,
+  );
+
+  // Extra large shadows
+  static const BoxShadow lg = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(0, 8),
+    blurRadius: 16,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow lg2 = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(0, 16),
+    blurRadius: 32,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow lg3 = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(0, 24),
+    blurRadius: 48,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow lg4 = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(0, 32),
+    blurRadius: 64,
+    spreadRadius: 0,
+  );
+
+  // Extra large shadows with spread
+  static const BoxShadow lgSpread = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(0, 8),
+    blurRadius: 16,
+    spreadRadius: 8,
+  );
+
+  static const BoxShadow lg2Spread = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(0, 16),
+    blurRadius: 32,
+    spreadRadius: 16,
+  );
+
+  static const BoxShadow lg3Spread = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(0, 24),
+    blurRadius: 48,
+    spreadRadius: 24,
+  );
+
+  static const BoxShadow lg4Spread = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(0, 32),
+    blurRadius: 64,
+    spreadRadius: 32,
+  );
+
+  // Extra large shadows with offset
+  static const BoxShadow lgOffset = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(8, 8),
+    blurRadius: 16,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow lg2Offset = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(16, 16),
+    blurRadius: 32,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow lg3Offset = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(24, 24),
+    blurRadius: 48,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow lg4Offset = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(32, 32),
+    blurRadius: 64,
+    spreadRadius: 0,
+  );
+
+  // Extra large shadows with diagonal offset
+  static const BoxShadow lgDiagonal = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(8, -8),
+    blurRadius: 16,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow lg2Diagonal = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(16, -16),
+    blurRadius: 32,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow lg3Diagonal = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(24, -24),
+    blurRadius: 48,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow lg4Diagonal = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(32, -32),
+    blurRadius: 64,
+    spreadRadius: 0,
+  );
+
+  // Extra large shadows with horizontal offset
+  static const BoxShadow lgHorizontal = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(8, 0),
+    blurRadius: 16,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow lg2Horizontal = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(16, 0),
+    blurRadius: 32,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow lg3Horizontal = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(24, 0),
+    blurRadius: 48,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow lg4Horizontal = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(32, 0),
+    blurRadius: 64,
+    spreadRadius: 0,
+  );
+
+  // Extra large shadows with vertical offset
+  static const BoxShadow lgVertical = BoxShadow(
+    color: Color(0x2E000000),
+    offset: Offset(0, 8),
+    blurRadius: 16,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow lg2Vertical = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(0, 16),
+    blurRadius: 32,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow lg3Vertical = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(0, 24),
+    blurRadius: 48,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow lg4Vertical = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(0, 32),
+    blurRadius: 64,
+    spreadRadius: 0,
+  );
+
+  // XXL shadows
+  static const BoxShadow xl = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(0, 16),
+    blurRadius: 32,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xl2 = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(0, 32),
+    blurRadius: 64,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xl3 = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(0, 48),
+    blurRadius: 96,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xl4 = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(0, 64),
+    blurRadius: 128,
+    spreadRadius: 0,
+  );
+
+  // XXL shadows with spread
+  static const BoxShadow xlSpread = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(0, 16),
+    blurRadius: 32,
+    spreadRadius: 16,
+  );
+
+  static const BoxShadow xl2Spread = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(0, 32),
+    blurRadius: 64,
+    spreadRadius: 32,
+  );
+
+  static const BoxShadow xl3Spread = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(0, 48),
+    blurRadius: 96,
+    spreadRadius: 48,
+  );
+
+  static const BoxShadow xl4Spread = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(0, 64),
+    blurRadius: 128,
+    spreadRadius: 64,
+  );
+
+  // XXL shadows with offset
+  static const BoxShadow xlOffset = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(16, 16),
+    blurRadius: 32,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xl2Offset = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(32, 32),
+    blurRadius: 64,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xl3Offset = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(48, 48),
+    blurRadius: 96,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xl4Offset = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(64, 64),
+    blurRadius: 128,
+    spreadRadius: 0,
+  );
+
+  // XXL shadows with diagonal offset
+  static const BoxShadow xlDiagonal = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(16, -16),
+    blurRadius: 32,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xl2Diagonal = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(32, -32),
+    blurRadius: 64,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xl3Diagonal = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(48, -48),
+    blurRadius: 96,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xl4Diagonal = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(64, -64),
+    blurRadius: 128,
+    spreadRadius: 0,
+  );
+
+  // XXL shadows with horizontal offset
+  static const BoxShadow xlHorizontal = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(16, 0),
+    blurRadius: 32,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xl2Horizontal = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(32, 0),
+    blurRadius: 64,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xl3Horizontal = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(48, 0),
+    blurRadius: 96,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xl4Horizontal = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(64, 0),
+    blurRadius: 128,
+    spreadRadius: 0,
+  );
+
+  // XXL shadows with vertical offset
+  static const BoxShadow xlVertical = BoxShadow(
+    color: Color(0x38000000),
+    offset: Offset(0, 16),
+    blurRadius: 32,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xl2Vertical = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(0, 32),
+    blurRadius: 64,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xl3Vertical = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(0, 48),
+    blurRadius: 96,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xl4Vertical = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(0, 64),
+    blurRadius: 128,
+    spreadRadius: 0,
+  );
+
+  // XXXL shadows
+  static const BoxShadow xxl = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(0, 32),
+    blurRadius: 64,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxl2 = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(0, 64),
+    blurRadius: 128,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxl3 = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(0, 96),
+    blurRadius: 192,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxl4 = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(0, 128),
+    blurRadius: 256,
+    spreadRadius: 0,
+  );
+
+  // XXXL shadows with spread
+  static const BoxShadow xxlSpread = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(0, 32),
+    blurRadius: 64,
+    spreadRadius: 32,
+  );
+
+  static const BoxShadow xxl2Spread = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(0, 64),
+    blurRadius: 128,
+    spreadRadius: 64,
+  );
+
+  static const BoxShadow xxl3Spread = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(0, 96),
+    blurRadius: 192,
+    spreadRadius: 96,
+  );
+
+  static const BoxShadow xxl4Spread = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(0, 128),
+    blurRadius: 256,
+    spreadRadius: 128,
+  );
+
+  // XXXL shadows with offset
+  static const BoxShadow xxlOffset = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(32, 32),
+    blurRadius: 64,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxl2Offset = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(64, 64),
+    blurRadius: 128,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxl3Offset = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(96, 96),
+    blurRadius: 192,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxl4Offset = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(128, 128),
+    blurRadius: 256,
+    spreadRadius: 0,
+  );
+
+  // XXXL shadows with diagonal offset
+  static const BoxShadow xxlDiagonal = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(32, -32),
+    blurRadius: 64,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxl2Diagonal = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(64, -64),
+    blurRadius: 128,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxl3Diagonal = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(96, -96),
+    blurRadius: 192,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxl4Diagonal = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(128, -128),
+    blurRadius: 256,
+    spreadRadius: 0,
+  );
+
+  // XXXL shadows with horizontal offset
+  static const BoxShadow xxlHorizontal = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(32, 0),
+    blurRadius: 64,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxl2Horizontal = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(64, 0),
+    blurRadius: 128,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxl3Horizontal = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(96, 0),
+    blurRadius: 192,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxl4Horizontal = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(128, 0),
+    blurRadius: 256,
+    spreadRadius: 0,
+  );
+
+  // XXXL shadows with vertical offset
+  static const BoxShadow xxlVertical = BoxShadow(
+    color: Color(0x42000000),
+    offset: Offset(0, 32),
+    blurRadius: 64,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxl2Vertical = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(0, 64),
+    blurRadius: 128,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxl3Vertical = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(0, 96),
+    blurRadius: 192,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxl4Vertical = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(0, 128),
+    blurRadius: 256,
+    spreadRadius: 0,
+  );
+
+  // XXXXL shadows
+  static const BoxShadow xxxl = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(0, 64),
+    blurRadius: 128,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxl2 = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(0, 128),
+    blurRadius: 256,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxl3 = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(0, 192),
+    blurRadius: 384,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxl4 = BoxShadow(
+    color: Color(0x6A000000),
+    offset: Offset(0, 256),
+    blurRadius: 512,
+    spreadRadius: 0,
+  );
+
+  // XXXXL shadows with spread
+  static const BoxShadow xxxlSpread = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(0, 64),
+    blurRadius: 128,
+    spreadRadius: 64,
+  );
+
+  static const BoxShadow xxxl2Spread = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(0, 128),
+    blurRadius: 256,
+    spreadRadius: 128,
+  );
+
+  static const BoxShadow xxxl3Spread = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(0, 192),
+    blurRadius: 384,
+    spreadRadius: 192,
+  );
+
+  static const BoxShadow xxxl4Spread = BoxShadow(
+    color: Color(0x6A000000),
+    offset: Offset(0, 256),
+    blurRadius: 512,
+    spreadRadius: 256,
+  );
+
+  // XXXXL shadows with offset
+  static const BoxShadow xxxlOffset = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(64, 64),
+    blurRadius: 128,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxl2Offset = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(128, 128),
+    blurRadius: 256,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxl3Offset = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(192, 192),
+    blurRadius: 384,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxl4Offset = BoxShadow(
+    color: Color(0x6A000000),
+    offset: Offset(256, 256),
+    blurRadius: 512,
+    spreadRadius: 0,
+  );
+
+  // XXXXL shadows with diagonal offset
+  static const BoxShadow xxxlDiagonal = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(64, -64),
+    blurRadius: 128,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxl2Diagonal = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(128, -128),
+    blurRadius: 256,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxl3Diagonal = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(192, -192),
+    blurRadius: 384,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxl4Diagonal = BoxShadow(
+    color: Color(0x6A000000),
+    offset: Offset(256, -256),
+    blurRadius: 512,
+    spreadRadius: 0,
+  );
+
+  // XXXXL shadows with horizontal offset
+  static const BoxShadow xxxlHorizontal = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(64, 0),
+    blurRadius: 128,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxl2Horizontal = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(128, 0),
+    blurRadius: 256,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxl3Horizontal = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(192, 0),
+    blurRadius: 384,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxl4Horizontal = BoxShadow(
+    color: Color(0x6A000000),
+    offset: Offset(256, 0),
+    blurRadius: 512,
+    spreadRadius: 0,
+  );
+
+  // XXXXL shadows with vertical offset
+  static const BoxShadow xxxlVertical = BoxShadow(
+    color: Color(0x4C000000),
+    offset: Offset(0, 64),
+    blurRadius: 128,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxl2Vertical = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(0, 128),
+    blurRadius: 256,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxl3Vertical = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(0, 192),
+    blurRadius: 384,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxl4Vertical = BoxShadow(
+    color: Color(0x6A000000),
+    offset: Offset(0, 256),
+    blurRadius: 512,
+    spreadRadius: 0,
+  );
+
+  // XXXXXL shadows
+  static const BoxShadow xxxxl = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(0, 128),
+    blurRadius: 256,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxl2 = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(0, 256),
+    blurRadius: 512,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxl3 = BoxShadow(
+    color: Color(0x6A000000),
+    offset: Offset(0, 384),
+    blurRadius: 768,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxl4 = BoxShadow(
+    color: Color(0x74000000),
+    offset: Offset(0, 512),
+    blurRadius: 1024,
+    spreadRadius: 0,
+  );
+
+  // XXXXXL shadows with spread
+  static const BoxShadow xxxxlSpread = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(0, 128),
+    blurRadius: 256,
+    spreadRadius: 128,
+  );
+
+  static const BoxShadow xxxxl2Spread = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(0, 256),
+    blurRadius: 512,
+    spreadRadius: 256,
+  );
+
+  static const BoxShadow xxxxl3Spread = BoxShadow(
+    color: Color(0x6A000000),
+    offset: Offset(0, 384),
+    blurRadius: 768,
+    spreadRadius: 384,
+  );
+
+  static const BoxShadow xxxxl4Spread = BoxShadow(
+    color: Color(0x74000000),
+    offset: Offset(0, 512),
+    blurRadius: 1024,
+    spreadRadius: 512,
+  );
+
+  // XXXXXL shadows with offset
+  static const BoxShadow xxxxlOffset = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(128, 128),
+    blurRadius: 256,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxl2Offset = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(256, 256),
+    blurRadius: 512,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxl3Offset = BoxShadow(
+    color: Color(0x6A000000),
+    offset: Offset(384, 384),
+    blurRadius: 768,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxl4Offset = BoxShadow(
+    color: Color(0x74000000),
+    offset: Offset(512, 512),
+    blurRadius: 1024,
+    spreadRadius: 0,
+  );
+
+  // XXXXXL shadows with diagonal offset
+  static const BoxShadow xxxxlDiagonal = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(128, -128),
+    blurRadius: 256,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxl2Diagonal = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(256, -256),
+    blurRadius: 512,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxl3Diagonal = BoxShadow(
+    color: Color(0x6A000000),
+    offset: Offset(384, -384),
+    blurRadius: 768,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxl4Diagonal = BoxShadow(
+    color: Color(0x74000000),
+    offset: Offset(512, -512),
+    blurRadius: 1024,
+    spreadRadius: 0,
+  );
+
+  // XXXXXL shadows with horizontal offset
+  static const BoxShadow xxxxlHorizontal = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(128, 0),
+    blurRadius: 256,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxl2Horizontal = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(256, 0),
+    blurRadius: 512,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxl3Horizontal = BoxShadow(
+    color: Color(0x6A000000),
+    offset: Offset(384, 0),
+    blurRadius: 768,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxl4Horizontal = BoxShadow(
+    color: Color(0x74000000),
+    offset: Offset(512, 0),
+    blurRadius: 1024,
+    spreadRadius: 0,
+  );
+
+  // XXXXXL shadows with vertical offset
+  static const BoxShadow xxxxlVertical = BoxShadow(
+    color: Color(0x56000000),
+    offset: Offset(0, 128),
+    blurRadius: 256,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxl2Vertical = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(0, 256),
+    blurRadius: 512,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxl3Vertical = BoxShadow(
+    color: Color(0x6A000000),
+    offset: Offset(0, 384),
+    blurRadius: 768,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxl4Vertical = BoxShadow(
+    color: Color(0x74000000),
+    offset: Offset(0, 512),
+    blurRadius: 1024,
+    spreadRadius: 0,
+  );
+
+  // XXXXXXL shadows
+  static const BoxShadow xxxxxx = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(0, 256),
+    blurRadius: 512,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxxx2 = BoxShadow(
+    color: Color(0x6A000000),
+    offset: Offset(0, 512),
+    blurRadius: 1024,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxxx3 = BoxShadow(
+    color: Color(0x74000000),
+    offset: Offset(0, 768),
+    blurRadius: 1536,
+    spreadRadius: 0,
+  );
+
+  static const BoxShadow xxxxxx4 = BoxShadow(
+    color: Color(0x7E000000),
+    offset: Offset(0, 1024),
+    blurRadius: 2048,
+    spreadRadius: 0,
+  );
+
+  // XXXXXXL shadows with spread
+  static const BoxShadow xxxxxxSpread = BoxShadow(
+    color: Color(0x60000000),
+    offset: Offset(0, 256),
+    blurRadius: 512,
+    spreadRadius: 256,
+  );
+
+  static const BoxShadow xxxxxx2Spread = BoxShadow(
+    color: Color(0x6A000000),
+    offset: Offset(0, 512),
+    blurRadius: 1024,
+    spreadRadius: 512,
+  );
+
+  static const BoxShadow xxxxxx3Spread = BoxShadow(
+    color: Color(0x74000000),
+    offset: Offset(0, 768),
+    blurRadius: 1536,
+    spreadRadius: 768,
+  );
+
+  static const BoxShadow xxxxxx4

@@ -1,110 +1,105 @@
 import 'package:flutter/material.dart';
-import 'screens/onboarding_screen.dart';
-import 'screens/home_screen.dart';
+import 'package:provider/provider.dart';
+import 'screens/splash_screen.dart';
+import 'screens/welcome_onboarding_screen.dart';
+import 'screens/new_onboarding_screen.dart';
+import 'screens/auth/new_otp_verification_screen.dart';
+import 'screens/auth/user_details_screen.dart';
+import 'screens/auth/login_screen.dart';
+import 'screens/signup_screen.dart';
+import 'screens/signup_success_screen.dart';
+import 'screens/home_page.dart';
 import 'screens/explore_screen.dart';
-import 'screens/trips_screen.dart';
+import 'screens/create_trip_screen.dart';
+import 'screens/create_trip_details_screen.dart';
 import 'screens/profile_screen.dart';
-import 'screens/destination_detail_screen.dart';
+import 'screens/subscription_screen.dart';
+import 'screens/messages_screen.dart';
+import 'screens/trip_management_screen.dart';
+import 'screens/profile_guide_screen.dart';
+import 'screens/profile_settings_screen.dart';
+import 'app/theme/theme.dart';
+import 'app/theme/typography.dart';
+import 'providers/app_provider.dart';
+import 'providers/user_provider.dart';
+import 'providers/auth_provider.dart';
 
 void main() {
-  runApp(const WelmaeApp());
+  runApp(const WelmaeMinimalApp());
 }
 
-class WelmaeApp extends StatelessWidget {
-  const WelmaeApp({super.key});
+class WelmaeMinimalApp extends StatelessWidget {
+  const WelmaeMinimalApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welmae',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF2563EB)),
-        useMaterial3: true,
-      ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const OnboardingScreen(),
-        '/main': (context) => const MainNavigationScreen(),
-      },
-      onGenerateRoute: (settings) {
-        if (settings.name == '/destination') {
-          final destinationId = settings.arguments as String;
-          return MaterialPageRoute(
-            builder: (context) => DestinationDetailScreen(destinationId: destinationId),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AppProvider()),
+        ChangeNotifierProvider(create: (_) => UserProvider()),
+        ChangeNotifierProvider(create: (_) => AuthProvider()..initializeAuth()),
+      ],
+      child: Consumer<AppProvider>(
+        builder: (context, appProvider, child) {
+          return MaterialApp(
+            title: 'Welmae',
+            debugShowCheckedModeBanner: false,
+            theme: AppTheme.lightTheme,
+            darkTheme: AppTheme.darkTheme,
+            themeMode: ThemeMode.light, // Force light theme for now
+            initialRoute: '/', // Change initial route back to splash screen
+            routes: {
+              '/': (context) => const SplashScreen(),
+              '/welcome-onboarding': (context) =>
+                  const WelcomeOnboardingScreen(),
+              '/phone-onboarding': (context) => const NewOnboardingScreen(),
+              '/login': (context) => const LoginScreen(),
+              '/signup': (context) => const SignupScreen(),
+              '/signup-success': (context) => const SignupSuccessScreen(),
+              '/home': (context) => const HomePage(),
+              '/explore': (context) => const ExploreScreen(),
+              '/create-trip': (context) => const CreateTripScreen(),
+              '/profile': (context) => const ProfileScreen(),
+              '/subscription': (context) => const SubscriptionScreen(),
+              '/messages': (context) => const MessagesScreen(),
+              '/trip-management': (context) => const TripManagementScreen(),
+              '/profile-guide': (context) => const ProfileGuideScreen(),
+              '/profile-settings': (context) => const ProfileSettingsScreen(),
+            },
+            onGenerateRoute: (settings) {
+              if (settings.name == '/otp-verification') {
+                final args = settings.arguments as Map<String, dynamic>;
+                return MaterialPageRoute(
+                  builder: (context) => NewOtpVerificationScreen(
+                    phoneNumber: args['phoneNumber'],
+                    otpId: args['otpId'],
+                    expiresAt: args['expiresAt'],
+                  ),
+                );
+              }
+              if (settings.name == '/user-details') {
+                final args = settings.arguments as Map<String, dynamic>?;
+                return MaterialPageRoute(
+                  builder: (context) => UserDetailsScreen(
+                    phoneNumber: args?['phoneNumber'] ?? '',
+                    isNewUser: args?['isNewUser'] ?? true,
+                  ),
+                );
+              }
+              if (settings.name == '/create-trip-details') {
+                final args = settings.arguments as Map<String, dynamic>;
+                return MaterialPageRoute(
+                  builder: (context) => CreateTripDetailsScreen(
+                    tripType: args['tripType'],
+                    title: args['title'],
+                  ),
+                );
+              }
+
+              return null;
+            },
           );
-        }
-        return null;
-      },
-    );
-  }
-}
-
-class MainNavigationScreen extends StatefulWidget {
-  const MainNavigationScreen({super.key});
-
-  @override
-  State<MainNavigationScreen> createState() => _MainNavigationScreenState();
-}
-
-class _MainNavigationScreenState extends State<MainNavigationScreen> {
-  int _selectedIndex = 0;
-
-  final List<Widget> _screens = [
-    const HomeScreen(),
-    const ExploreScreen(),
-    const TripsScreen(),
-    const ProfileScreen(),
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: _screens[_selectedIndex],
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.1),
-              blurRadius: 10,
-              offset: const Offset(0, -5),
-            ),
-          ],
-        ),
-        child: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          currentIndex: _selectedIndex,
-          onTap: (index) {
-            setState(() {
-              _selectedIndex = index;
-            });
-          },
-          selectedItemColor: const Color(0xFF2563EB),
-          unselectedItemColor: Colors.grey[600],
-          backgroundColor: Colors.white,
-          elevation: 0,
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined),
-              activeIcon: Icon(Icons.home),
-              label: 'Ana Sayfa',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.explore_outlined),
-              activeIcon: Icon(Icons.explore),
-              label: 'Keşfet',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.flight_outlined),
-              activeIcon: Icon(Icons.flight),
-              label: 'Seyahatler',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline),
-              activeIcon: Icon(Icons.person),
-              label: 'Profil',
-            ),
-          ],
-        ),
+        },
       ),
     );
   }

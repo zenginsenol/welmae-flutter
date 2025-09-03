@@ -1,0 +1,1675 @@
+
+import 'package:flutter/material.dart';
+
+class AppTextStyles {
+  // Display Text Styles
+  static const TextStyle displayLarge = TextStyle(
+    fontSize: 57,
+    fontWeight: FontWeight.w400,
+    height: 1.2,
+    letterSpacing: -0.25,
+  );
+  
+  static const TextStyle displayMedium = TextStyle(
+    fontSize: 45,
+    fontWeight: FontWeight.w400,
+    height: 1.2,
+    letterSpacing: 0,
+  );
+  
+  static const TextStyle displaySmall = TextStyle(
+    fontSize: 36,
+    fontWeight: FontWeight.w400,
+    height: 1.25,
+    letterSpacing: 0,
+  );
+  
+  // Headline Text Styles
+  static const TextStyle headlineLarge = TextStyle(
+    fontSize: 32,
+    fontWeight: FontWeight.w600,
+    height: 1.25,
+    letterSpacing: 0,
+  );
+  
+  static const TextStyle headlineMedium = TextStyle(
+    fontSize: 28,
+    fontWeight: FontWeight.w600,
+    height: 1.3,
+    letterSpacing: 0,
+  );
+  
+  static const TextStyle headlineSmall = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w600,
+    height: 1.3,
+    letterSpacing: 0,
+  );
+  
+  // Title Text Styles
+  static const TextStyle titleLarge = TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.w600,
+    height: 1.3,
+    letterSpacing: 0,
+  );
+  
+  static const TextStyle titleMedium = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    height: 1.5,
+    letterSpacing: 0.15,
+  );
+  
+  static const TextStyle titleSmall = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    height: 1.4,
+    letterSpacing: 0.1,
+  );
+  
+  // Label Text Styles
+  static const TextStyle labelLarge = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    height: 1.4,
+    letterSpacing: 0.1,
+  );
+  
+  static const TextStyle labelMedium = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    height: 1.36,
+    letterSpacing: 0.5,
+  );
+  
+  static const TextStyle labelSmall = TextStyle(
+    fontSize: 11,
+    fontWeight: FontWeight.w500,
+    height: 1.5,
+    letterSpacing: 0.5,
+  );
+  
+  // Body Text Styles
+  static const TextStyle bodyLarge = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    height: 1.5,
+    letterSpacing: 0.5,
+  );
+  
+  static const TextStyle bodyMedium = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    height: 1.43,
+    letterSpacing: 0.25,
+  );
+  
+  static const TextStyle bodySmall = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    height: 1.33,
+    letterSpacing: 0.4,
+  );
+  
+  // Hero Text Styles
+  static const TextStyle hero = TextStyle(
+    fontSize: 72,
+    fontWeight: FontWeight.w700,
+    height: 1.1,
+    letterSpacing: -0.02,
+  );
+  
+  // Mega Text Styles
+  static const TextStyle mega = TextStyle(
+    fontSize: 96,
+    fontWeight: FontWeight.w800,
+    height: 1.05,
+    letterSpacing: -0.02,
+  );
+  
+  // Giga Text Styles
+  static const TextStyle giga = TextStyle(
+    fontSize: 128,
+    fontWeight: FontWeight.w900,
+    height: 1.02,
+    letterSpacing: -0.02,
+  );
+  
+  // Tera Text Styles
+  static const TextStyle tera = TextStyle(
+    fontSize: 160,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Peta Text Styles
+  static const TextStyle peta = TextStyle(
+    fontSize: 192,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Exa Text Styles
+  static const TextStyle exa = TextStyle(
+    fontSize: 224,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Zetta Text Styles
+  static const TextStyle zetta = TextStyle(
+    fontSize: 256,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Yotta Text Styles
+  static const TextStyle yotta = TextStyle(
+    fontSize: 288,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ronna Text Styles
+  static const TextStyle ronna = TextStyle(
+    fontSize: 320,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Quetta Text Styles
+  static const TextStyle quetta = TextStyle(
+    fontSize: 352,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xona Text Styles
+  static const TextStyle xona = TextStyle(
+    fontSize: 384,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Weka Text Styles
+  static const TextStyle weka = TextStyle(
+    fontSize: 416,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vuna Text Styles
+  static const TextStyle vuna = TextStyle(
+    fontSize: 448,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uda Text Styles
+  static const TextStyle uda = TextStyle(
+    fontSize: 480,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Treda Text Styles
+  static const TextStyle treda = TextStyle(
+    fontSize: 512,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Sorta Text Styles
+  static const TextStyle sorta = TextStyle(
+    fontSize: 544,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rinta Text Styles
+  static const TextStyle rinta = TextStyle(
+    fontSize: 576,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Quexa Text Styles
+  static const TextStyle quexa = TextStyle(
+    fontSize: 608,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Pepta Text Styles
+  static const TextStyle pepta = TextStyle(
+    fontSize: 640,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xoxxa Text Styles
+  static const TextStyle xoxxa = TextStyle(
+    fontSize: 672,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wekka Text Styles
+  static const TextStyle wekka = TextStyle(
+    fontSize: 704,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vuvva Text Styles
+  static const TextStyle vuvva = TextStyle(
+    fontSize: 736,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uxu Text Styles
+  static const TextStyle uxu = TextStyle(
+    fontSize: 768,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttta Text Styles
+  static const TextStyle ttta = TextStyle(
+    fontSize: 800,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ssetta Text Styles
+  static const TextStyle ssetta = TextStyle(
+    fontSize: 832,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rronna Text Styles
+  static const TextStyle rronna = TextStyle(
+    fontSize: 864,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qquetta Text Styles
+  static const TextStyle qquetta = TextStyle(
+    fontSize: 896,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxona Text Styles
+  static const TextStyle xxona = TextStyle(
+    fontSize: 928,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Weka Text Styles
+  static const TextStyle wweka = TextStyle(
+    fontSize: 960,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvuna Text Styles
+  static const TextStyle vvuna = TextStyle(
+    fontSize: 992,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuda Text Styles
+  static const TextStyle uuda = TextStyle(
+    fontSize: 1024,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttreda Text Styles
+  static const TextStyle ttreda = TextStyle(
+    fontSize: 1056,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ssorta Text Styles
+  static const TextStyle ssorta = TextStyle(
+    fontSize: 1088,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrinta Text Styles
+  static const TextStyle rrinta = TextStyle(
+    fontSize: 1120,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qquexa Text Styles
+  static const TextStyle qquexa = TextStyle(
+    fontSize: 1152,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ppepta Text Styles
+  static const TextStyle ppepta = TextStyle(
+    fontSize: 1184,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxoxxa Text Styles
+  static const TextStyle xxoxxa = TextStyle(
+    fontSize: 1216,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwekka Text Styles
+  static const TextStyle wwekka = TextStyle(
+    fontSize: 1248,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvuvva Text Styles
+  static const TextStyle vvuvva = TextStyle(
+    fontSize: 1280,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuxu Text Styles
+  static const TextStyle uuxu = TextStyle(
+    fontSize: 1312,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Tttta Text Styles
+  static const TextStyle tttta = TextStyle(
+    fontSize: 1344,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ssssetta Text Styles
+  static const TextStyle ssssetta = TextStyle(
+    fontSize: 1376,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrronna Text Styles
+  static const TextStyle rrrronna = TextStyle(
+    fontSize: 1408,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqquetta Text Styles
+  static const TextStyle qqqquetta = TextStyle(
+    fontSize: 1440,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxona Text Styles
+  static const TextStyle xxxona = TextStyle(
+    fontSize: 1472,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwweka Text Styles
+  static const TextStyle wwwweka = TextStyle(
+    fontSize: 1504,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvuna Text Styles
+  static const TextStyle vvvvuna = TextStyle(
+    fontSize: 1536,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuda Text Styles
+  static const TextStyle uuuda = TextStyle(
+    fontSize: 1568,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttreda Text Styles
+  static const TextStyle ttttreda = TextStyle(
+    fontSize: 1600,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ssssorta Text Styles
+  static const TextStyle ssssorta = TextStyle(
+    fontSize: 1632,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrinta Text Styles
+  static const TextStyle rrrrrinta = TextStyle(
+    fontSize: 1664,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqquexa Text Styles
+  static const TextStyle qqqqqquexa = TextStyle(
+    fontSize: 1696,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Pppppepta Text Styles
+  static const TextStyle pppppepta = TextStyle(
+    fontSize: 1728,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxoxxa Text Styles
+  static const TextStyle xxxxoxxa = TextStyle(
+    fontSize: 1760,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwekka Text Styles
+  static const TextStyle wwwwwekka = TextStyle(
+    fontSize: 1792,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvuvva Text Styles
+  static const TextStyle vvvvvvuvva = TextStyle(
+    fontSize: 1824,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuxu Text Styles
+  static const TextStyle uuuuuuxu = TextStyle(
+    fontSize: 1856,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttta Text Styles
+  static const TextStyle ttttttta = TextStyle(
+    fontSize: 1888,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ssssssetta Text Styles
+  static const TextStyle ssssssetta = TextStyle(
+    fontSize: 1920,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrronna Text Styles
+  static const TextStyle rrrrrrronna = TextStyle(
+    fontSize: 1952,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqquetta Text Styles
+  static const TextStyle qqqqqqqquetta = TextStyle(
+    fontSize: 1984,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxona Text Styles
+  static const TextStyle xxxxxxona = TextStyle(
+    fontSize: 2016,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwweka Text Styles
+  static const TextStyle wwwwwwwwekka = TextStyle(
+    fontSize: 2048,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvuna Text Styles
+  static const TextStyle vvvvvvvvuna = TextStyle(
+    fontSize: 2080,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuda Text Styles
+  static const TextStyle uuuuuuuuda = TextStyle(
+    fontSize: 2112,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttreda Text Styles
+  static const TextStyle ttttttttreda = TextStyle(
+    fontSize: 2144,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ssssssssorta Text Styles
+  static const TextStyle ssssssssorta = TextStyle(
+    fontSize: 2176,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrinta Text Styles
+  static const TextStyle rrrrrrrrrinta = TextStyle(
+    fontSize: 2208,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqqqquexa Text Styles
+  static const TextStyle qqqqqqqqqquexa = TextStyle(
+    fontSize: 2240,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Pppppppppepta Text Styles
+  static const TextStyle pppppppppepta = TextStyle(
+    fontSize: 2272,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxxxoxxa Text Styles
+  static const TextStyle xxxxxxxxoxxa = TextStyle(
+    fontSize: 2304,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwwwwekka Text Styles
+  static const TextStyle wwwwwwwwwwekka = TextStyle(
+    fontSize: 2336,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvvvuvva Text Styles
+  static const TextStyle vvvvvvvvvvuvva = TextStyle(
+    fontSize: 2368,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuuuxu Text Styles
+  static const TextStyle uuuuuuuuuuxu = TextStyle(
+    fontSize: 2400,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttttta Text Styles
+  static const TextStyle ttttttttttta = TextStyle(
+    fontSize: 2432,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Sssssssssssetta Text Styles
+  static const TextStyle sssssssssssetta = TextStyle(
+    fontSize: 2464,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrrronna Text Styles
+  static const TextStyle rrrrrrrrrrrronna = TextStyle(
+    fontSize: 2496,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqqqqqquetta Text Styles
+  static const TextStyle qqqqqqqqqqqquetta = TextStyle(
+    fontSize: 2528,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxxxxona Text Styles
+  static const TextStyle xxxxxxxxxona = TextStyle(
+    fontSize: 2560,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwwwwweka Text Styles
+  static const TextStyle wwwwwwwwwwwwekka = TextStyle(
+    fontSize: 2592,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvvvvvuna Text Styles
+  static const TextStyle vvvvvvvvvvvvuna = TextStyle(
+    fontSize: 2624,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuuuuuda Text Styles
+  static const TextStyle uuuuuuuuuuuuda = TextStyle(
+    fontSize: 2656,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttttttreda Text Styles
+  static const TextStyle ttttttttttttreda = TextStyle(
+    fontSize: 2688,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ssssssssssssorta Text Styles
+  static const TextStyle ssssssssssssorta = TextStyle(
+    fontSize: 2720,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrrrrrinta Text Styles
+  static const TextStyle rrrrrrrrrrrrrrinta = TextStyle(
+    fontSize: 2752,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqqqqqqqquexa Text Styles
+  static const TextStyle qqqqqqqqqqqqqquexa = TextStyle(
+    fontSize: 2784,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Pppppppppppppepta Text Styles
+  static const TextStyle pppppppppppppepta = TextStyle(
+    fontSize: 2816,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxxxxxxoxxa Text Styles
+  static const TextStyle xxxxxxxxxxxoxxa = TextStyle(
+    fontSize: 2848,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwwwwwwwwwekka Text Styles
+  static const TextStyle wwwwwwwwwwwwwwwekka = TextStyle(
+    fontSize: 2880,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvvvvvvvuvva Text Styles
+  static const TextStyle vvvvvvvvvvvvvvuvva = TextStyle(
+    fontSize: 2912,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuuuuuuuxu Text Styles
+  static const TextStyle uuuuuuuuuuuuuuxu = TextStyle(
+    fontSize: 2944,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttttttttta Text Styles
+  static const TextStyle ttttttttttttttta = TextStyle(
+    fontSize: 2976,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Sssssssssssssssetta Text Styles
+  static const TextStyle sssssssssssssssetta = TextStyle(
+    fontSize: 3008,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrrrrrrronna Text Styles
+  static const TextStyle rrrrrrrrrrrrrrrronna = TextStyle(
+    fontSize: 3040,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqqqqqqqqqquetta Text Styles
+  static const TextStyle qqqqqqqqqqqqqqqquetta = TextStyle(
+    fontSize: 3072,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxxxxxxxxona Text Styles
+  static const TextStyle xxxxxxxxxxxxxona = TextStyle(
+    fontSize: 3104,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwwwwwwwwwweka Text Styles
+  static const TextStyle wwwwwwwwwwwwwwwwekka = TextStyle(
+    fontSize: 3136,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvvvvvvvvvuna Text Styles
+  static const TextStyle vvvvvvvvvvvvvvvvuna = TextStyle(
+    fontSize: 3168,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuuuuuuuuuda Text Styles
+  static const TextStyle uuuuuuuuuuuuuuuuda = TextStyle(
+    fontSize: 3200,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttttttttttreda Text Styles
+  static const TextStyle ttttttttttttttttreda = TextStyle(
+    fontSize: 3232,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ssssssssssssssssorta Text Styles
+  static const TextStyle ssssssssssssssssorta = TextStyle(
+    fontSize: 3264,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrrrrrrrrrinta Text Styles
+  static const TextStyle rrrrrrrrrrrrrrrrrinta = TextStyle(
+    fontSize: 3296,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqqqqqqqqqqqquexa Text Styles
+  static const TextStyle qqqqqqqqqqqqqqqqqquexa = TextStyle(
+    fontSize: 3328,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Pppppppppppppppppepta Text Styles
+  static const TextStyle pppppppppppppppppepta = TextStyle(
+    fontSize: 3360,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxxxxxxxxxoxxa Text Styles
+  static const TextStyle xxxxxxxxxxxxxxxoxxa = TextStyle(
+    fontSize: 3392,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwwwwwwwwwwwwekka Text Styles
+  static const TextStyle wwwwwwwwwwwwwwwwwwwekka = TextStyle(
+    fontSize: 3424,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvvvvvvvvvvvuvva Text Styles
+  static const TextStyle vvvvvvvvvvvvvvvvvvuvva = TextStyle(
+    fontSize: 3456,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuuuuuuuuuuuxu Text Styles
+  static const TextStyle uuuuuuuuuuuuuuuuuuxu = TextStyle(
+    fontSize: 3488,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttttttttttttta Text Styles
+  static const TextStyle ttttttttttttttttttta = TextStyle(
+    fontSize: 3520,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Sssssssssssssssssssetta Text Styles
+  static const TextStyle sssssssssssssssssssetta = TextStyle(
+    fontSize: 3552,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrrrrrrrrrrronna Text Styles
+  static const TextStyle rrrrrrrrrrrrrrrrrrrronna = TextStyle(
+    fontSize: 3584,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqqqqqqqqqqqqqquetta Text Styles
+  static const TextStyle qqqqqqqqqqqqqqqqqqqquetta = TextStyle(
+    fontSize: 3616,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxxxxxxxxxxona Text Styles
+  static const TextStyle xxxxxxxxxxxxxxxxxona = TextStyle(
+    fontSize: 3648,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwwwwwwwwwwwwwweka Text Styles
+  static const TextStyle wwwwwwwwwwwwwwwwwwwwekka = TextStyle(
+    fontSize: 3680,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvvvvvvvvvvvvvuna Text Styles
+  static const TextStyle vvvvvvvvvvvvvvvvvvvvuna = TextStyle(
+    fontSize: 3712,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuuuuuuuuuuuuuda Text Styles
+  static const TextStyle uuuuuuuuuuuuuuuuuuuuda = TextStyle(
+    fontSize: 3744,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttttttttttttttreda Text Styles
+  static const TextStyle ttttttttttttttttttttreda = TextStyle(
+    fontSize: 3776,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ssssssssssssssssssssorta Text Styles
+  static const TextStyle ssssssssssssssssssssorta = TextStyle(
+    fontSize: 3808,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrrrrrrrrrrrrinta Text Styles
+  static const TextStyle rrrrrrrrrrrrrrrrrrrrinta = TextStyle(
+    fontSize: 3840,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqqqqqqqqqqqqqqquexa Text Styles
+  static const TextStyle qqqqqqqqqqqqqqqqqqqqquexa = TextStyle(
+    fontSize: 3872,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Pppppppppppppppppppppepta Text Styles
+  static const TextStyle pppppppppppppppppppppepta = TextStyle(
+    fontSize: 3904,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxxxxxxxxxxxxoxxa Text Styles
+  static const TextStyle xxxxxxxxxxxxxxxxoxxa = TextStyle(
+    fontSize: 3936,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwwwwwwwwwwwwwwwwekka Text Styles
+  static const TextStyle wwwwwwwwwwwwwwwwwwwwwwekka = TextStyle(
+    fontSize: 3968,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvvvvvvvvvvvvvvvuvva Text Styles
+  static const TextStyle vvvvvvvvvvvvvvvvvvvvvvuvva = TextStyle(
+    fontSize: 4000,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuuuuuuuuuuuuuuxu Text Styles
+  static const TextStyle uuuuuuuuuuuuuuuuuuuuuxu = TextStyle(
+    fontSize: 4032,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttttttttttttttta Text Styles
+  static const TextStyle ttttttttttttttttttttta = TextStyle(
+    fontSize: 4064,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Sssssssssssssssssssssetta Text Styles
+  static const TextStyle sssssssssssssssssssssetta = TextStyle(
+    fontSize: 4096,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrrrrrrrrrrrrronna Text Styles
+  static const TextStyle rrrrrrrrrrrrrrrrrrrrrronna = TextStyle(
+    fontSize: 4128,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqqqqqqqqqqqqqqqquetta Text Styles
+  static const TextStyle qqqqqqqqqqqqqqqqqqqqqquetta = TextStyle(
+    fontSize: 4160,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxxxxxxxxxxxxxona Text Styles
+  static const TextStyle xxxxxxxxxxxxxxxxona = TextStyle(
+    fontSize: 4192,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwwwwwwwwwwwwwwwwweka Text Styles
+  static const TextStyle wwwwwwwwwwwwwwwwwwwwwwwekka = TextStyle(
+    fontSize: 4224,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvvvvvvvvvvvvvvvvvuna Text Styles
+  static const TextStyle vvvvvvvvvvvvvvvvvvvvvvvvuna = TextStyle(
+    fontSize: 4256,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuuuuuuuuuuuuuuuuda Text Styles
+  static const TextStyle uuuuuuuuuuuuuuuuuuuuuuuda = TextStyle(
+    fontSize: 4288,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttttttttttttttttreda Text Styles
+  static const TextStyle ttttttttttttttttttttttreda = TextStyle(
+    fontSize: 4320,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ssssssssssssssssssssssorta Text Styles
+  static const TextStyle ssssssssssssssssssssssorta = TextStyle(
+    fontSize: 4352,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrrrrrrrrrrrrrrinta Text Styles
+  static const TextStyle rrrrrrrrrrrrrrrrrrrrrrinta = TextStyle(
+    fontSize: 4384,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqqqqqqqqqqqqqqqqquexa Text Styles
+  static const TextStyle qqqqqqqqqqqqqqqqqqqqqqquexa = TextStyle(
+    fontSize: 4416,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Pppppppppppppppppppppppepta Text Styles
+  static const TextStyle pppppppppppppppppppppppepta = TextStyle(
+    fontSize: 4448,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxxxxxxxxxxxxxxoxxa Text Styles
+  static const TextStyle xxxxxxxxxxxxxxxxxoxxa = TextStyle(
+    fontSize: 4480,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwwwwwwwwwwwwwwwwwwekka Text Styles
+  static const TextStyle wwwwwwwwwwwwwwwwwwwwwwwwekka = TextStyle(
+    fontSize: 4512,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvvvvvvvvvvvvvvvvvvuvva Text Styles
+  static const TextStyle vvvvvvvvvvvvvvvvvvvvvvvvvuvva = TextStyle(
+    fontSize: 4544,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuuuuuuuuuuuuuuuuuuxu Text Styles
+  static const TextStyle uuuuuuuuuuuuuuuuuuuuuuuuuxu = TextStyle(
+    fontSize: 4576,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttttttttttttttttttta Text Styles
+  static const TextStyle ttttttttttttttttttttttttta = TextStyle(
+    fontSize: 4608,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Sssssssssssssssssssssssetta Text Styles
+  static const TextStyle sssssssssssssssssssssssetta = TextStyle(
+    fontSize: 4640,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrrrrrrrrrrrrrrrronna Text Styles
+  static const TextStyle rrrrrrrrrrrrrrrrrrrrrrrronna = TextStyle(
+    fontSize: 4672,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqqqqqqqqqqqqqqqqqquetta Text Styles
+  static const TextStyle qqqqqqqqqqqqqqqqqqqqqqqquetta = TextStyle(
+    fontSize: 4704,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxxxxxxxxxxxxxxxona Text Styles
+  static const TextStyle xxxxxxxxxxxxxxxxxona = TextStyle(
+    fontSize: 4736,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwwwwwwwwwwwwwwwwwwwwekka Text Styles
+  static const TextStyle wwwwwwwwwwwwwwwwwwwwwwwwwwekka = TextStyle(
+    fontSize: 4768,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvvvvvvvvvvvvvvvvvvvuna Text Styles
+  static const TextStyle vvvvvvvvvvvvvvvvvvvvvvvvvvuna = TextStyle(
+    fontSize: 4800,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuuuuuuuuuuuuuuuuuuuda Text Styles
+  static const TextStyle uuuuuuuuuuuuuuuuuuuuuuuuuuda = TextStyle(
+    fontSize: 4832,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttttttttttttttttttttreda Text Styles
+  static const TextStyle ttttttttttttttttttttttttttreda = TextStyle(
+    fontSize: 4864,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ssssssssssssssssssssssssorta Text Styles
+  static const TextStyle ssssssssssssssssssssssssorta = TextStyle(
+    fontSize: 4896,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrrrrrrrrrrrrrrrrrrinta Text Styles
+  static const TextStyle rrrrrrrrrrrrrrrrrrrrrrrrrrinta = TextStyle(
+    fontSize: 4928,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqqqqqqqqqqqqqqqqqqquexa Text Styles
+  static const TextStyle qqqqqqqqqqqqqqqqqqqqqqqqquexa = TextStyle(
+    fontSize: 4960,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ppppppppppppppppppppppppepta Text Styles
+  static const TextStyle ppppppppppppppppppppppppepta = TextStyle(
+    fontSize: 4992,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxxxxxxxxxxxxxxxxoxxa Text Styles
+  static const TextStyle xxxxxxxxxxxxxxxxxxxoxxa = TextStyle(
+    fontSize: 5024,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwwwwwwwwwwwwwwwwwwwwwwekka Text Styles
+  static const TextStyle wwwwwwwwwwwwwwwwwwwwwwwwwwwwwekka = TextStyle(
+    fontSize: 5056,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvvvvvvvvvvvvvvvvvvvvuvva Text Styles
+  static const TextStyle vvvvvvvvvvvvvvvvvvvvvvvvvvvuvva = TextStyle(
+    fontSize: 5088,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuuuuuuuuuuuuuuuuuuuuuxu Text Styles
+  static const TextStyle uuuuuuuuuuuuuuuuuuuuuuuuuuuuxu = TextStyle(
+    fontSize: 5120,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttttttttttttttttttttta Text Styles
+  static const TextStyle ttttttttttttttttttttttttttta = TextStyle(
+    fontSize: 5152,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Sssssssssssssssssssssssssetta Text Styles
+  static const TextStyle sssssssssssssssssssssssssetta = TextStyle(
+    fontSize: 5184,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrrrrrrrrrrrrrrrrrrronna Text Styles
+  static const TextStyle rrrrrrrrrrrrrrrrrrrrrrrrrrrronna = TextStyle(
+    fontSize: 5216,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqqqqqqqqqqqqqqqqqqqquetta Text Styles
+  static const TextStyle qqqqqqqqqqqqqqqqqqqqqqqqqquetta = TextStyle(
+    fontSize: 5248,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxxxxxxxxxxxxxxxxxona Text Styles
+  static const TextStyle xxxxxxxxxxxxxxxxxxxxona = TextStyle(
+    fontSize: 5280,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwekka Text Styles
+  static const TextStyle wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwekka = TextStyle(
+    fontSize: 5312,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvvvvvvvvvvvvvvvvvvvvvuna Text Styles
+  static const TextStyle vvvvvvvvvvvvvvvvvvvvvvvvvvvvuna = TextStyle(
+    fontSize: 5344,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuuuuuuuuuuuuuuuuuuuuuuda Text Styles
+  static const TextStyle uuuuuuuuuuuuuuuuuuuuuuuuuuuuuda = TextStyle(
+    fontSize: 5376,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttttttttttttttttttttttreda Text Styles
+  static const TextStyle ttttttttttttttttttttttttttttreda = TextStyle(
+    fontSize: 5408,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ssssssssssssssssssssssssssorta Text Styles
+  static const TextStyle ssssssssssssssssssssssssssorta = TextStyle(
+    fontSize: 5440,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrrrrrrrrrrrrrrrrrrrrinta Text Styles
+  static const TextStyle rrrrrrrrrrrrrrrrrrrrrrrrrrrrinta = TextStyle(
+    fontSize: 5472,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqqqqqqqqqqqqqqqqqqqqquexa Text Styles
+  static const TextStyle qqqqqqqqqqqqqqqqqqqqqqqqqqquexa = TextStyle(
+    fontSize: 5504,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Pppppppppppppppppppppppppepta Text Styles
+  static const TextStyle pppppppppppppppppppppppppepta = TextStyle(
+    fontSize: 5536,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxxxxxxxxxxxxxxxxxoxxa Text Styles
+  static const TextStyle xxxxxxxxxxxxxxxxxxxxoxxa = TextStyle(
+    fontSize: 5568,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwekka Text Styles
+  static const TextStyle wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwekka = TextStyle(
+    fontSize: 5600,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvvvvvvvvvvvvvvvvvvvvvvuvva Text Styles
+  static const TextStyle vvvvvvvvvvvvvvvvvvvvvvvvvvvvvuvva = TextStyle(
+    fontSize: 5632,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuxu Text Styles
+  static const TextStyle uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuxu = TextStyle(
+    fontSize: 5664,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttttttttttttttttttttttta Text Styles
+  static const TextStyle ttttttttttttttttttttttttttttta = TextStyle(
+    fontSize: 5696,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Sssssssssssssssssssssssssssetta Text Styles
+  static const TextStyle sssssssssssssssssssssssssssetta = TextStyle(
+    fontSize: 5728,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrrrrrrrrrrrrrrrrrrrronna Text Styles
+  static const TextStyle rrrrrrrrrrrrrrrrrrrrrrrrrrrronna = TextStyle(
+    fontSize: 5760,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqqqqqqqqqqqqqqqqqqqqqquetta Text Styles
+  static const TextStyle qqqqqqqqqqqqqqqqqqqqqqqqqqqquetta = TextStyle(
+    fontSize: 5792,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxxxxxxxxxxxxxxxxxxona Text Styles
+  static const TextStyle xxxxxxxxxxxxxxxxxxxxxona = TextStyle(
+    fontSize: 5824,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwekka Text Styles
+  static const TextStyle wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwekka = TextStyle(
+    fontSize: 5856,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvuna Text Styles
+  static const TextStyle vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvuna = TextStyle(
+    fontSize: 5888,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuda Text Styles
+  static const TextStyle uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuda = TextStyle(
+    fontSize: 5920,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttttttttttttttttttttttttreda Text Styles
+  static const TextStyle ttttttttttttttttttttttttttttttreda = TextStyle(
+    fontSize: 5952,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ssssssssssssssssssssssssssssorta Text Styles
+  static const TextStyle ssssssssssssssssssssssssssssorta = TextStyle(
+    fontSize: 5984,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrinta Text Styles
+  static const TextStyle rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrinta = TextStyle(
+    fontSize: 6016,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Qqqqqqqqqqqqqqqqqqqqqqqqqqqqquexa Text Styles
+  static const TextStyle qqqqqqqqqqqqqqqqqqqqqqqqqqqqquexa = TextStyle(
+    fontSize: 6048,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ppppppppppppppppppppppppppepta Text Styles
+  static const TextStyle ppppppppppppppppppppppppppepta = TextStyle(
+    fontSize: 6080,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Xxxxxxxxxxxxxxxxxxxxxxxxoxxa Text Styles
+  static const TextStyle xxxxxxxxxxxxxxxxxxxxxxxoxxa = TextStyle(
+    fontSize: 6112,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwekka Text Styles
+  static const TextStyle wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwekka = TextStyle(
+    fontSize: 6144,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvuvva Text Styles
+  static const TextStyle vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvuvva = TextStyle(
+    fontSize: 6176,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuxu Text Styles
+  static const TextStyle uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuxu = TextStyle(
+    fontSize: 6208,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Ttttttttttttttttttttttttttttttta Text Styles
+  static const TextStyle ttttttttttttttttttttttttttttttta = TextStyle(
+    fontSize: 6240,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Sssssssssssssssssssssssssssssetta Text Styles
+  static const TextStyle sssssssssssssssssssssssssssssetta = TextStyle(
+    fontSize: 6272,
+    fontWeight: FontWeight.w900,
+    height: 1.01,
+    letterSpacing: -0.02,
+  );
+  
+  // Rrrrrrrrrrrrrrrrrrrrrrrrrrrrrronna Text

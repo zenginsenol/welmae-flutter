@@ -15,7 +15,8 @@ class _TripsScreenState extends State<TripsScreen> {
       'id': 1,
       'title': 'Kapadokya Turu',
       'location': 'Nevşehir, Türkiye',
-      'image': 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop',
+      'image':
+          'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop',
       'date': '15-18 Ağustos 2024',
       'status': 'confirmed',
       'type': 'flight',
@@ -25,7 +26,8 @@ class _TripsScreenState extends State<TripsScreen> {
       'id': 2,
       'title': 'Antalya Tatili',
       'location': 'Antalya, Türkiye',
-      'image': 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop',
+      'image':
+          'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop',
       'date': '25-30 Eylül 2024',
       'status': 'pending',
       'type': 'hotel',
@@ -38,7 +40,8 @@ class _TripsScreenState extends State<TripsScreen> {
       'id': 3,
       'title': 'İstanbul Gezisi',
       'location': 'İstanbul, Türkiye',
-      'image': 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=300&h=200&fit=crop',
+      'image':
+          'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=300&h=200&fit=crop',
       'date': '10-15 Haziran 2024',
       'status': 'completed',
       'type': 'flight',
@@ -48,7 +51,8 @@ class _TripsScreenState extends State<TripsScreen> {
       'id': 4,
       'title': 'Pamukkale Turu',
       'location': 'Denizli, Türkiye',
-      'image': 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=300&h=200&fit=crop',
+      'image':
+          'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=300&h=200&fit=crop',
       'date': '5-8 Mayıs 2024',
       'status': 'completed',
       'type': 'car',
@@ -139,10 +143,10 @@ class _TripsScreenState extends State<TripsScreen> {
               child: Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF2563EB).withOpacity(0.1),
+                  color: const Color(0xFF2563EB).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(
-                    color: const Color(0xFF2563EB).withOpacity(0.3),
+                    color: const Color(0xFF2563EB).withValues(alpha: 0.3),
                   ),
                 ),
                 child: Row(
@@ -199,12 +203,16 @@ class _TripsScreenState extends State<TripsScreen> {
                         child: Container(
                           padding: const EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: activeTab == 'upcoming' ? Colors.white : Colors.transparent,
+                            color: activeTab == 'upcoming'
+                                ? Colors.white
+                                : Colors.transparent,
                             borderRadius: BorderRadius.circular(8),
                             boxShadow: activeTab == 'upcoming'
                                 ? [
                                     BoxShadow(
-                                      color: Colors.black.withOpacity(0.1),
+                                      color: Colors.black.withValues(
+                                        alpha: 0.1,
+                                      ),
                                       blurRadius: 4,
                                       offset: const Offset(0, 2),
                                     ),
@@ -215,7 +223,9 @@ class _TripsScreenState extends State<TripsScreen> {
                             'Yaklaşan',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: activeTab == 'upcoming' ? const Color(0xFF2563EB) : Colors.grey[600],
+                              color: activeTab == 'upcoming'
+                                  ? const Color(0xFF2563EB)
+                                  : Colors.grey[600],
                               fontWeight: FontWeight.w600,
                             ),
                           ),
@@ -232,12 +242,16 @@ class _TripsScreenState extends State<TripsScreen> {
                         child: Container(
                           padding: const EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: activeTab == 'past' ? Colors.white : Colors.transparent,
+                            color: activeTab == 'past'
+                                ? Colors.white
+                                : Colors.transparent,
                             borderRadius: BorderRadius.circular(8),
                             boxShadow: activeTab == 'past'
                                 ? [
                                     BoxShadow(
-                                      color: Colors.black.withOpacity(0.1),
+                                      color: Colors.black.withValues(
+                                        alpha: 0.1,
+                                      ),
                                       blurRadius: 4,
                                       offset: const Offset(0, 2),
                                     ),
@@ -248,7 +262,9 @@ class _TripsScreenState extends State<TripsScreen> {
                             'Geçmiş',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: activeTab == 'past' ? const Color(0xFF2563EB) : Colors.grey[600],
+                              color: activeTab == 'past'
+                                  ? const Color(0xFF2563EB)
+                                  : Colors.grey[600],
                               fontWeight: FontWeight.w600,
                             ),
                           ),
@@ -296,7 +312,7 @@ class _TripsScreenState extends State<TripsScreen> {
           width: 50,
           height: 50,
           decoration: BoxDecoration(
-            color: color.withOpacity(0.2),
+            color: color.withValues(alpha: 0.2),
             borderRadius: BorderRadius.circular(25),
           ),
           child: Icon(icon, color: color, size: 24),
@@ -312,10 +328,7 @@ class _TripsScreenState extends State<TripsScreen> {
         ),
         Text(
           label,
-          style: TextStyle(
-            fontSize: 12,
-            color: Colors.grey[600],
-          ),
+          style: TextStyle(fontSize: 12, color: Colors.grey[600]),
           textAlign: TextAlign.center,
         ),
       ],
@@ -355,11 +368,7 @@ class _TripsScreenState extends State<TripsScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(
-            icon,
-            size: 64,
-            color: Colors.grey[400],
-          ),
+          Icon(icon, size: 64, color: Colors.grey[400]),
           const SizedBox(height: 16),
           Text(
             title,
@@ -372,10 +381,7 @@ class _TripsScreenState extends State<TripsScreen> {
           const SizedBox(height: 8),
           Text(
             subtitle,
-            style: TextStyle(
-              fontSize: 14,
-              color: Colors.grey[500],
-            ),
+            style: TextStyle(fontSize: 14, color: Colors.grey[500]),
             textAlign: TextAlign.center,
           ),
           if (type == 'upcoming') ...[
@@ -387,7 +393,10 @@ class _TripsScreenState extends State<TripsScreen> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF2563EB),
                 foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 24,
+                  vertical: 12,
+                ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
@@ -407,7 +416,7 @@ class _TripsScreenState extends State<TripsScreen> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black.withValues(alpha: 0.1),
             blurRadius: 10,
             offset: const Offset(0, 5),
           ),
@@ -430,7 +439,10 @@ class _TripsScreenState extends State<TripsScreen> {
               top: 16,
               right: 16,
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 6,
+                ),
                 decoration: BoxDecoration(
                   color: getStatusColor(trip['status']),
                   borderRadius: BorderRadius.circular(20),
@@ -454,7 +466,7 @@ class _TripsScreenState extends State<TripsScreen> {
                 width: 40,
                 height: 40,
                 decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.7),
+                  color: Colors.black.withValues(alpha: 0.7),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Icon(
@@ -478,7 +490,7 @@ class _TripsScreenState extends State<TripsScreen> {
                     end: Alignment.bottomCenter,
                     colors: [
                       Colors.transparent,
-                      Colors.black.withOpacity(0.8),
+                      Colors.black.withValues(alpha: 0.8),
                     ],
                   ),
                 ),
@@ -497,7 +509,7 @@ class _TripsScreenState extends State<TripsScreen> {
                     Text(
                       trip['location'],
                       style: TextStyle(
-                        color: Colors.white.withOpacity(0.8),
+                        color: Colors.white.withValues(alpha: 0.8),
                         fontSize: 14,
                       ),
                     ),
@@ -508,7 +520,7 @@ class _TripsScreenState extends State<TripsScreen> {
                         Text(
                           trip['date'],
                           style: TextStyle(
-                            color: Colors.white.withOpacity(0.9),
+                            color: Colors.white.withValues(alpha: 0.9),
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
                           ),

@@ -1,0 +1,1290 @@
+
+import 'package:flutter/material.dart';
+
+class AppBorders {
+  // No border
+  static const BorderSide none = BorderSide.none;
+
+  // Thin borders
+  static const BorderSide xs = BorderSide(
+    color: Color(0xFFE5E7EB),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xs2 = BorderSide(
+    color: Color(0xFFE5E7EB),
+    width: 1.0,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xs3 = BorderSide(
+    color: Color(0xFFE5E7EB),
+    width: 1.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xs4 = BorderSide(
+    color: Color(0xFFE5E7EB),
+    width: 2.0,
+    style: BorderStyle.solid,
+  );
+
+  // Thin borders with different colors
+  static const BorderSide xsPrimary = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsSecondary = BorderSide(
+    color: Color(0xFF64748B),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsSuccess = BorderSide(
+    color: Color(0xFF10B981),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsWarning = BorderSide(
+    color: Color(0xFFF59E0B),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsError = BorderSide(
+    color: Color(0xFFEF4444),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsInfo = BorderSide(
+    color: Color(0xFF3B82F6),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  // Thin borders with different styles
+  static const BorderSide xsDashed = BorderSide(
+    color: Color(0xFFE5E7EB),
+    width: 0.5,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsDotted = BorderSide(
+    color: Color(0xFFE5E7EB),
+    width: 0.5,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsDouble = BorderSide(
+    color: Color(0xFFE5E7EB),
+    width: 0.5,
+    style: BorderStyle.double,
+  );
+
+  // Thin borders with different widths
+  static const BorderSide xs05 = BorderSide(
+    color: Color(0xFFE5E7EB),
+    width: 0.25,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xs075 = BorderSide(
+    color: Color(0xFFE5E7EB),
+    width: 0.375,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xs125 = BorderSide(
+    color: Color(0xFFE5E7EB),
+    width: 0.625,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xs175 = BorderSide(
+    color: Color(0xFFE5E7EB),
+    width: 0.875,
+    style: BorderStyle.solid,
+  );
+
+  // Thin borders with different opacities
+  static const BorderSide xs10 = BorderSide(
+    color: Color(0x1A000000),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xs20 = BorderSide(
+    color: Color(0x33000000),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xs30 = BorderSide(
+    color: Color(0x4D000000),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xs40 = BorderSide(
+    color: Color(0x66000000),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xs50 = BorderSide(
+    color: Color(0x80000000),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xs60 = BorderSide(
+    color: Color(0x99000000),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xs70 = BorderSide(
+    color: Color(0xB3000000),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xs80 = BorderSide(
+    color: Color(0xCC000000),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xs90 = BorderSide(
+    color: Color(0xE6000000),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xs100 = BorderSide(
+    color: Color(0xFF000000),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  // Thin borders with different colors and opacities
+  static const BorderSide xsPrimary10 = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary20 = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary30 = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary40 = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary50 = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary60 = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary70 = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary80 = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary90 = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary100 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.5,
+    style: BorderStyle.solid,
+  );
+
+  // Thin borders with different colors and styles
+  static const BorderSide xsPrimaryDashed = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.5,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimaryDotted = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.5,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimaryDouble = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.5,
+    style: BorderStyle.double,
+  );
+
+  // Thin borders with different colors and widths
+  static const BorderSide xsPrimary05 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.25,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary075 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.375,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary125 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.625,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary175 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.875,
+    style: BorderStyle.solid,
+  );
+
+  // Thin borders with different colors and opacities and styles
+  static const BorderSide xsPrimary10Dashed = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.5,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary20Dashed = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.5,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary30Dashed = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.5,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary40Dashed = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.5,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary50Dashed = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.5,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary60Dashed = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.5,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary70Dashed = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.5,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary80Dashed = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.5,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary90Dashed = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.5,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary100Dashed = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.5,
+    style: BorderStyle.dashed,
+  );
+
+  // Thin borders with different colors and opacities and dotted
+  static const BorderSide xsPrimary10Dotted = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.5,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary20Dotted = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.5,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary30Dotted = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.5,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary40Dotted = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.5,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary50Dotted = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.5,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary60Dotted = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.5,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary70Dotted = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.5,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary80Dotted = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.5,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary90Dotted = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.5,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary100Dotted = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.5,
+    style: BorderStyle.dotted,
+  );
+
+  // Thin borders with different colors and opacities and double
+  static const BorderSide xsPrimary10Double = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.5,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary20Double = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.5,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary30Double = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.5,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary40Double = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.5,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary50Double = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.5,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary60Double = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.5,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary70Double = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.5,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary80Double = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.5,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary90Double = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.5,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary100Double = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.5,
+    style: BorderStyle.double,
+  );
+
+  // Thin borders with different colors and opacities and widths
+  static const BorderSide xsPrimary10_05 = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.25,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary20_05 = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.25,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary30_05 = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.25,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary40_05 = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.25,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary50_05 = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.25,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary60_05 = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.25,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary70_05 = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.25,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary80_05 = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.25,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary90_05 = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.25,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary100_05 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.25,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary10_075 = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.375,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary20_075 = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.375,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary30_075 = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.375,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary40_075 = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.375,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary50_075 = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.375,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary60_075 = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.375,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary70_075 = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.375,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary80_075 = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.375,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary90_075 = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.375,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary100_075 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.375,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary10_125 = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.625,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary20_125 = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.625,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary30_125 = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.625,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary40_125 = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.625,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary50_125 = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.625,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary60_125 = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.625,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary70_125 = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.625,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary80_125 = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.625,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary90_125 = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.625,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary100_125 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.625,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary10_175 = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.875,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary20_175 = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.875,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary30_175 = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.875,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary40_175 = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.875,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary50_175 = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.875,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary60_175 = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.875,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary70_175 = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.875,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary80_175 = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.875,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary90_175 = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.875,
+    style: BorderStyle.solid,
+  );
+
+  static const BorderSide xsPrimary100_175 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.875,
+    style: BorderStyle.solid,
+  );
+
+  // Thin borders with different colors and opacities and styles and widths
+  static const BorderSide xsPrimary10Dashed_05 = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.25,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary20Dashed_05 = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.25,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary30Dashed_05 = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.25,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary40Dashed_05 = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.25,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary50Dashed_05 = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.25,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary60Dashed_05 = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.25,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary70Dashed_05 = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.25,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary80Dashed_05 = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.25,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary90Dashed_05 = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.25,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary100Dashed_05 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.25,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary10Dashed_075 = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.375,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary20Dashed_075 = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.375,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary30Dashed_075 = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.375,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary40Dashed_075 = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.375,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary50Dashed_075 = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.375,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary60Dashed_075 = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.375,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary70Dashed_075 = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.375,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary80Dashed_075 = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.375,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary90Dashed_075 = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.375,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary100Dashed_075 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.375,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary10Dashed_125 = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.625,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary20Dashed_125 = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.625,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary30Dashed_125 = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.625,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary40Dashed_125 = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.625,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary50Dashed_125 = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.625,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary60Dashed_125 = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.625,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary70Dashed_125 = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.625,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary80Dashed_125 = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.625,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary90Dashed_125 = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.625,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary100Dashed_125 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.625,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary10Dashed_175 = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.875,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary20Dashed_175 = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.875,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary30Dashed_175 = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.875,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary40Dashed_175 = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.875,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary50Dashed_175 = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.875,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary60Dashed_175 = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.875,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary70Dashed_175 = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.875,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary80Dashed_175 = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.875,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary90Dashed_175 = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.875,
+    style: BorderStyle.dashed,
+  );
+
+  static const BorderSide xsPrimary100Dashed_175 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.875,
+    style: BorderStyle.dashed,
+  );
+
+  // Thin borders with different colors and opacities and dotted and widths
+  static const BorderSide xsPrimary10Dotted_05 = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.25,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary20Dotted_05 = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.25,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary30Dotted_05 = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.25,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary40Dotted_05 = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.25,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary50Dotted_05 = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.25,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary60Dotted_05 = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.25,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary70Dotted_05 = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.25,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary80Dotted_05 = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.25,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary90Dotted_05 = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.25,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary100Dotted_05 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.25,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary10Dotted_075 = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.375,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary20Dotted_075 = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.375,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary30Dotted_075 = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.375,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary40Dotted_075 = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.375,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary50Dotted_075 = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.375,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary60Dotted_075 = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.375,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary70Dotted_075 = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.375,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary80Dotted_075 = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.375,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary90Dotted_075 = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.375,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary100Dotted_075 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.375,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary10Dotted_125 = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.625,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary20Dotted_125 = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.625,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary30Dotted_125 = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.625,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary40Dotted_125 = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.625,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary50Dotted_125 = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.625,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary60Dotted_125 = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.625,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary70Dotted_125 = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.625,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary80Dotted_125 = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.625,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary90Dotted_125 = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.625,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary100Dotted_125 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.625,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary10Dotted_175 = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.875,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary20Dotted_175 = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.875,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary30Dotted_175 = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.875,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary40Dotted_175 = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.875,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary50Dotted_175 = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.875,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary60Dotted_175 = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.875,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary70Dotted_175 = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.875,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary80Dotted_175 = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.875,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary90Dotted_175 = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.875,
+    style: BorderStyle.dotted,
+  );
+
+  static const BorderSide xsPrimary100Dotted_175 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.875,
+    style: BorderStyle.dotted,
+  );
+
+  // Thin borders with different colors and opacities and double and widths
+  static const BorderSide xsPrimary10Double_05 = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.25,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary20Double_05 = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.25,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary30Double_05 = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.25,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary40Double_05 = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.25,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary50Double_05 = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.25,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary60Double_05 = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.25,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary70Double_05 = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.25,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary80Double_05 = BorderSide(
+    color: Color(0xCC6366F1),
+    width: 0.25,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary90Double_05 = BorderSide(
+    color: Color(0xE66366F1),
+    width: 0.25,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary100Double_05 = BorderSide(
+    color: Color(0xFF6366F1),
+    width: 0.25,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary10Double_075 = BorderSide(
+    color: Color(0x1A6366F1),
+    width: 0.375,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary20Double_075 = BorderSide(
+    color: Color(0x336366F1),
+    width: 0.375,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary30Double_075 = BorderSide(
+    color: Color(0x4D6366F1),
+    width: 0.375,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary40Double_075 = BorderSide(
+    color: Color(0x666366F1),
+    width: 0.375,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary50Double_075 = BorderSide(
+    color: Color(0x806366F1),
+    width: 0.375,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary60Double_075 = BorderSide(
+    color: Color(0x996366F1),
+    width: 0.375,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary70Double_075 = BorderSide(
+    color: Color(0xB36366F1),
+    width: 0.375,
+    style: BorderStyle.double,
+  );
+
+  static const BorderSide xsPrimary80Double_075 = BorderSide(
+    color

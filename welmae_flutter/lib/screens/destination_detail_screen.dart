@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 
 class DestinationDetailScreen extends StatefulWidget {
   final String destinationId;
-  
-  const DestinationDetailScreen({
-    super.key,
-    required this.destinationId,
-  });
+
+  const DestinationDetailScreen({super.key, required this.destinationId});
 
   @override
-  State<DestinationDetailScreen> createState() => _DestinationDetailScreenState();
+  State<DestinationDetailScreen> createState() =>
+      _DestinationDetailScreenState();
 }
 
 class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
@@ -23,7 +21,8 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
       'rating': 4.8,
       'reviews': 1247,
       'price': '₺2,500',
-      'description': 'Kapadokya, eşsiz peri bacaları, tarihi kiliseler ve sıcak hava balonları ile dünya çapında ünlü bir turizm destinasyonudur.',
+      'description':
+          'Kapadokya, eşsiz peri bacaları, tarihi kiliseler ve sıcak hava balonları ile dünya çapında ünlü bir turizm destinasyonudur.',
       'images': [
         'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
         'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=400&h=300&fit=crop',
@@ -35,12 +34,7 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
         'Yeraltı Şehirleri',
         'Tarihi Kiliseler',
       ],
-      'features': [
-        'Ücretsiz WiFi',
-        'Rehberlik Hizmeti',
-        'Transfer',
-        'Sigorta',
-      ],
+      'features': ['Ücretsiz WiFi', 'Rehberlik Hizmeti', 'Transfer', 'Sigorta'],
     },
     '2': {
       'title': 'Antalya',
@@ -48,7 +42,8 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
       'rating': 4.6,
       'reviews': 892,
       'price': '₺1,800',
-      'description': 'Antalya, muhteşem plajları, antik kalıntıları ve modern tesisleri ile Akdeniz\'in incisi olarak bilinir.',
+      'description':
+          'Antalya, muhteşem plajları, antik kalıntıları ve modern tesisleri ile Akdeniz\'in incisi olarak bilinir.',
       'images': [
         'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop',
         'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=400&h=300&fit=crop',
@@ -60,16 +55,11 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
         'Düden Şelalesi',
         'Aspendos Tiyatrosu',
       ],
-      'features': [
-        'Deniz Manzarası',
-        'Spor Aktiviteleri',
-        'Restoran',
-        'Havuz',
-      ],
+      'features': ['Deniz Manzarası', 'Spor Aktiviteleri', 'Restoran', 'Havuz'],
     },
   };
 
-  Map<String, dynamic> get destination => 
+  Map<String, dynamic> get destination =>
       destinationData[widget.destinationId] ?? destinationData['1']!;
 
   @override
@@ -88,7 +78,7 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
             leading: Container(
               margin: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.9),
+                color: Colors.white.withValues(alpha: 0.9),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: IconButton(
@@ -100,7 +90,7 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
               Container(
                 margin: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.9),
+                  color: Colors.white.withValues(alpha: 0.9),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: IconButton(
@@ -113,7 +103,7 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
               Container(
                 margin: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.9),
+                  color: Colors.white.withValues(alpha: 0.9),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: IconButton(
@@ -157,7 +147,7 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
                       );
                     },
                   ),
-                  
+
                   // Image Indicator
                   Positioned(
                     bottom: 20,
@@ -172,9 +162,9 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
                           width: currentImageIndex == index ? 24 : 8,
                           height: 8,
                           decoration: BoxDecoration(
-                            color: currentImageIndex == index 
-                                ? Colors.white 
-                                : Colors.white.withOpacity(0.5),
+                            color: currentImageIndex == index
+                                ? Colors.white
+                                : Colors.white.withValues(alpha: 0.5),
                             borderRadius: BorderRadius.circular(4),
                           ),
                         ),
@@ -235,11 +225,7 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
                         children: [
                           Row(
                             children: [
-                              Icon(
-                                Icons.star,
-                                color: Colors.amber,
-                                size: 20,
-                              ),
+                              Icon(Icons.star, color: Colors.amber, size: 20),
                               const SizedBox(width: 4),
                               Text(
                                 destination['rating'].toString(),
@@ -268,10 +254,10 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
                   Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF2563EB).withOpacity(0.1),
+                      color: const Color(0xFF2563EB).withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                        color: const Color(0xFF2563EB).withOpacity(0.3),
+                        color: const Color(0xFF2563EB).withValues(alpha: 0.3),
                       ),
                     ),
                     child: Row(
@@ -360,7 +346,9 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
                   Wrap(
                     spacing: 12,
                     runSpacing: 12,
-                    children: destination['highlights'].map<Widget>((highlight) {
+                    children: destination['highlights'].map<Widget>((
+                      highlight,
+                    ) {
                       return Container(
                         padding: const EdgeInsets.symmetric(
                           horizontal: 16,
@@ -394,26 +382,28 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
                     ),
                   ),
                   const SizedBox(height: 12),
-                  ...destination['features'].map((feature) => Padding(
-                    padding: const EdgeInsets.only(bottom: 12),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.check_circle,
-                          color: Colors.green[600],
-                          size: 20,
-                        ),
-                        const SizedBox(width: 12),
-                        Text(
-                          feature,
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.grey[700],
+                  ...destination['features'].map(
+                    (feature) => Padding(
+                      padding: const EdgeInsets.only(bottom: 12),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.check_circle,
+                            color: Colors.green[600],
+                            size: 20,
                           ),
-                        ),
-                      ],
+                          const SizedBox(width: 12),
+                          Text(
+                            feature,
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.grey[700],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  )),
+                  ),
 
                   const SizedBox(height: 24),
 
@@ -440,7 +430,7 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
                             borderRadius: BorderRadius.circular(12),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.black.withOpacity(0.1),
+                                color: Colors.black.withValues(alpha: 0.1),
                                 blurRadius: 10,
                                 offset: const Offset(0, 5),
                               ),
@@ -519,7 +509,9 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
                                     children: List.generate(5, (index) {
                                       return Icon(
                                         Icons.star,
-                                        color: index < 4 ? Colors.amber : Colors.grey[300],
+                                        color: index < 4
+                                            ? Colors.amber
+                                            : Colors.grey[300],
                                         size: 16,
                                       );
                                     }),
@@ -581,14 +573,16 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
                     ),
                   ),
 
-                  const SizedBox(height: 100), // Bottom spacing for sticky button
+                  const SizedBox(
+                    height: 100,
+                  ), // Bottom spacing for sticky button
                 ],
               ),
             ),
           ),
         ],
       ),
-      
+
       // Sticky Bottom Button
       bottomNavigationBar: Container(
         padding: const EdgeInsets.all(20),
@@ -596,7 +590,7 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.black.withValues(alpha: 0.1),
               blurRadius: 10,
               offset: const Offset(0, -5),
             ),
@@ -611,10 +605,7 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
                 children: [
                   Text(
                     'Toplam fiyat',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey[600],
-                    ),
+                    style: TextStyle(fontSize: 14, color: Colors.grey[600]),
                   ),
                   Text(
                     destination['price'],
