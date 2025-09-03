@@ -327,15 +327,13 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
     Navigator.pop(context, country);
   }
 
-  void _onMapViewPressed() {
+  void _onMapViewPressed() async {
     HapticFeedback.mediumImpact();
     
-    // TODO: Harita görünümü ekranına git
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text('Harita görünümü yakında gelecek!'),
-        backgroundColor: velmaeTeal,
-      ),
-    );
+    final result = await Navigator.pushNamed(context, '/country-map');
+    if (result != null) {
+      final country = result as Map<String, String>;
+      Navigator.pop(context, country);
+    }
   }
 }

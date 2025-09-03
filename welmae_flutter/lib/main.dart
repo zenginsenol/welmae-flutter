@@ -10,6 +10,7 @@ import 'screens/signup_screen.dart';
 import 'screens/signup_success_screen.dart';
 import 'screens/location_selection_screen.dart';
 import 'screens/country_selection_screen.dart';
+import 'screens/country_map_screen.dart';
 import 'screens/home_page.dart';
 import 'screens/explore_screen.dart';
 import 'screens/create_trip_screen.dart';
@@ -57,6 +58,7 @@ class WelmaeMinimalApp extends StatelessWidget {
               '/phone-onboarding': (context) => const NewOnboardingScreen(),
               '/location-selection': (context) => const LocationSelectionScreen(),
               '/country-selection': (context) => const CountrySelectionScreen(),
+              '/country-map': (context) => const CountryMapScreen(),
               '/login': (context) => const LoginScreen(),
               '/signup': (context) => const SignupScreen(),
               '/signup-success': (context) => const SignupSuccessScreen(),
