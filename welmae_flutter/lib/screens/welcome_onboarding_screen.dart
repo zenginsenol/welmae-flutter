@@ -44,7 +44,7 @@ class _WelcomeOnboardingScreenState extends State<WelcomeOnboardingScreen>
 
   void _handleSignupTap() {
     HapticFeedback.mediumImpact();
-    Navigator.pushNamed(context, '/signup');
+    Navigator.pushNamed(context, '/location-selection');
   }
 
   void _handleLoginTap() {

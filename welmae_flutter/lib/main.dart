@@ -8,6 +8,7 @@ import 'screens/auth/user_details_screen.dart';
 import 'screens/auth/login_screen.dart';
 import 'screens/signup_screen.dart';
 import 'screens/signup_success_screen.dart';
+import 'screens/location_selection_screen.dart';
 import 'screens/home_page.dart';
 import 'screens/explore_screen.dart';
 import 'screens/create_trip_screen.dart';
@@ -53,6 +54,7 @@ class WelmaeMinimalApp extends StatelessWidget {
               '/welcome-onboarding': (context) =>
                   const WelcomeOnboardingScreen(),
               '/phone-onboarding': (context) => const NewOnboardingScreen(),
+              '/location-selection': (context) => const LocationSelectionScreen(),
               '/login': (context) => const LoginScreen(),
               '/signup': (context) => const SignupScreen(),
               '/signup-success': (context) => const SignupSuccessScreen(),
