@@ -73,61 +73,14 @@ class _WelcomeOnboardingScreenState extends State<WelcomeOnboardingScreen>
                   fit: BoxFit.cover,
                 ),
               ),
-              child: Stack(
+              child: Column(
                 children: [
-                  // Kayıt Ol butonu (alt orta)
-                  Positioned(
-                    bottom: size.height * 0.25,
-                    left: size.width * 0.1,
-                    right: size.width * 0.1,
-                    child: MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      onEnter: (_) => setState(() => _isSignupHovered = true),
-                      onExit: (_) => setState(() => _isSignupHovered = false),
-                      child: GestureDetector(
-                        onTap: _handleSignupTap,
-                        child: AnimatedContainer(
-                          duration: const Duration(milliseconds: 200),
-                          height: 56,
-                          decoration: BoxDecoration(
-                            color: _isSignupHovered 
-                                ? const Color(0xFFA8D6D6) // Daha koyu teal
-                                : const Color(0xFFB8E6E6), // Açık teal/mint
-                            borderRadius: BorderRadius.circular(28),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withValues(alpha: 0.1),
-                                blurRadius: 8,
-                                offset: const Offset(0, 2),
-                              ),
-                            ],
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Kayıt Ol',
-                              style: TextStyle(
-                                color: const Color(0xFF013C3C), // Koyu teal
-                                fontSize: _isSignupHovered ? 18 : 16,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-
-
-
-                  // Üst kısım - Logo alanı (isteğe bağlı)
-                  Positioned(
-                    top: size.height * 0.1,
-                    left: 0,
-                    right: 0,
+                  // Üst kısım - Logo alanı
+                  Expanded(
+                    flex: 3,
                     child: GestureDetector(
                       onTap: () {
                         HapticFeedback.lightImpact();
-                        // Logo'ya tıklandığında splash screen'e dön
                         Navigator.pushNamedAndRemoveUntil(
                           context,
                           '/',
@@ -135,47 +88,91 @@ class _WelcomeOnboardingScreenState extends State<WelcomeOnboardingScreen>
                         );
                       },
                       child: Container(
-                        height: 80,
                         color: Colors.transparent,
                       ),
                     ),
                   ),
-
-                  // Giriş yapın linki (Kayıt Ol butonunun altında)
-                  Positioned(
-                    bottom: size.height * 0.15,
-                    left: 0,
-                    right: 0,
-                    child: MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      onEnter: (_) => setState(() => _isLoginHovered = true),
-                      onExit: (_) => setState(() => _isLoginHovered = false),
-                      child: GestureDetector(
-                        onTap: _handleLoginTap,
-                        child: Center(
-                          child: RichText(
-                            text: TextSpan(
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                              ),
-                              children: [
-                                const TextSpan(text: 'Üyeliğiniz mi var? '),
-                                TextSpan(
-                                  text: 'Giriş yapın',
-                                  style: TextStyle(
-                                    color: _isLoginHovered 
-                                        ? const Color(0xFF03A6A6) // Velmae teal
-                                        : const Color(0xFFB8E6E6), // Açık teal
-                                    fontWeight: FontWeight.w600,
-                                    decoration: TextDecoration.underline,
+                  
+                  // Alt kısım - Butonlar
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          // Kayıt Ol butonu
+                          MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            onEnter: (_) => setState(() => _isSignupHovered = true),
+                            onExit: (_) => setState(() => _isSignupHovered = false),
+                            child: GestureDetector(
+                              onTap: _handleSignupTap,
+                              child: AnimatedContainer(
+                                duration: const Duration(milliseconds: 200),
+                                width: double.infinity,
+                                height: 56,
+                                decoration: BoxDecoration(
+                                  color: _isSignupHovered 
+                                      ? const Color(0xFFA8D6D6) // Daha koyu teal
+                                      : const Color(0xFFB8E6E6), // Açık teal/mint
+                                  borderRadius: BorderRadius.circular(28),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withValues(alpha: 0.1),
+                                      blurRadius: 8,
+                                      offset: const Offset(0, 2),
+                                    ),
+                                  ],
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    'Kayıt Ol',
+                                    style: TextStyle(
+                                      color: const Color(0xFF013C3C), // Koyu teal
+                                      fontSize: _isSignupHovered ? 18 : 16,
+                                      fontWeight: FontWeight.w700,
+                                    ),
                                   ),
                                 ),
-                              ],
+                              ),
                             ),
                           ),
-                        ),
+                          
+                          const SizedBox(height: 20),
+                          
+                          // Giriş yapın linki
+                          MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            onEnter: (_) => setState(() => _isLoginHovered = true),
+                            onExit: (_) => setState(() => _isLoginHovered = false),
+                            child: GestureDetector(
+                              onTap: _handleLoginTap,
+                              child: RichText(
+                                text: TextSpan(
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                  children: [
+                                    const TextSpan(text: 'Üyeliğiniz mi var? '),
+                                    TextSpan(
+                                      text: 'Giriş yapın',
+                                      style: TextStyle(
+                                        color: _isLoginHovered 
+                                            ? const Color(0xFF03A6A6) // Velmae teal
+                                            : const Color(0xFFB8E6E6), // Açık teal
+                                        fontWeight: FontWeight.w600,
+                                        decoration: TextDecoration.underline,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
