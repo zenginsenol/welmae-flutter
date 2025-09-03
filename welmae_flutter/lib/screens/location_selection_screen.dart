@@ -304,22 +304,15 @@ class _LocationSelectionScreenState extends State<LocationSelectionScreen> {
     );
   }
 
-  void _showCountryPicker() {
-    showModalBottomSheet(
-      context: context,
-      backgroundColor: Colors.transparent,
-      builder: (context) => _buildPickerModal(
-        title: 'Ülke Seçin',
-        items: countries,
-        onSelected: (country) {
-          setState(() {
-            selectedCountry = country;
-            selectedCity = null; // Reset city when country changes
-          });
-          Navigator.pop(context);
-        },
-      ),
-    );
+  void _showCountryPicker() async {
+    final result = await Navigator.pushNamed(context, '/country-selection');
+    if (result != null) {
+      final country = result as Map<String, String>;
+      setState(() {
+        selectedCountry = country['name'];
+        selectedCity = null; // Reset city when country changes
+      });
+    }
   }
 
   void _showCityPicker() {
