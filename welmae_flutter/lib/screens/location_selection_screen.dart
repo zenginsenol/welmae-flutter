@@ -255,7 +255,7 @@ class _LocationSelectionScreenState extends State<LocationSelectionScreen> {
   }
 
   Widget _buildContinueButton() {
-    final isEnabled = selectedCountry != null && selectedCity != null;
+    final isEnabled = selectedCountry != null;
     
     return GestureDetector(
       onTap: isEnabled ? _onContinue : null,
@@ -406,14 +406,15 @@ class _LocationSelectionScreenState extends State<LocationSelectionScreen> {
   }
 
   void _onContinue() {
-    if (selectedCountry != null && selectedCity != null) {
+    if (selectedCountry != null) {
       HapticFeedback.mediumImpact();
       
-      // Backend'e lokasyon bilgisini gönder
-      _saveLocationData();
-      
-      // Sonraki sayfaya git
-      Navigator.pushNamed(context, '/signup');
+      // Şehir seçimi ekranına git
+      Navigator.pushNamed(
+        context, 
+        '/city-selection',
+        arguments: selectedCountry,
+      );
     }
   }
 

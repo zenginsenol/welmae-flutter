@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'screens/splash_screen.dart';
 import 'screens/welcome_onboarding_screen.dart';
@@ -12,6 +13,14 @@ import 'screens/location_selection_screen.dart';
 import 'screens/country_selection_screen.dart';
 import 'screens/country_map_screen.dart';
 import 'screens/phone_login_screen.dart';
+import 'screens/city_selection_screen.dart';
+import 'screens/name_input_screen.dart';
+import 'screens/email_input_screen.dart';
+import 'screens/phone_input_screen.dart';
+import 'screens/password_input_screen.dart';
+import 'screens/birthdate_input_screen.dart';
+import 'screens/bio_input_screen.dart';
+import 'screens/otp_verification_screen.dart';
 import 'screens/home_page.dart';
 import 'screens/explore_screen.dart';
 import 'screens/create_trip_screen.dart';
@@ -50,6 +59,16 @@ class WelmaeMinimalApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             theme: AppTheme.lightTheme,
             darkTheme: AppTheme.darkTheme,
+            locale: const Locale('tr', 'TR'),
+            localizationsDelegates: const [
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: const [
+              Locale('tr', 'TR'),
+              Locale('en', 'US'),
+            ],
             themeMode: ThemeMode.light, // Force light theme for now
             initialRoute: '/', // Change initial route back to splash screen
             routes: {
@@ -61,6 +80,17 @@ class WelmaeMinimalApp extends StatelessWidget {
               '/country-selection': (context) => const CountrySelectionScreen(),
               '/country-map': (context) => const CountryMapScreen(),
               '/phone-login': (context) => const PhoneLoginScreen(),
+              '/city-selection': (context) {
+                final country = ModalRoute.of(context)?.settings.arguments as String?;
+                return CitySelectionScreen(selectedCountry: country);
+              },
+              '/name-input': (context) => const NameInputScreen(),
+              '/email-input': (context) => const EmailInputScreen(),
+              '/phone-input': (context) => const PhoneInputScreen(),
+              '/password-input': (context) => const PasswordInputScreen(),
+              '/birthdate-input': (context) => const BirthdateInputScreen(),
+              '/bio-input': (context) => const BioInputScreen(),
+              '/otp-verification': (context) => const OtpVerificationScreen(),
               '/login': (context) => const LoginScreen(),
               '/signup': (context) => const SignupScreen(),
               '/signup-success': (context) => const SignupSuccessScreen(),
